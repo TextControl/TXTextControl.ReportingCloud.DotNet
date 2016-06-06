@@ -9,8 +9,8 @@ namespace TXTextControl.ReportingCloud.Tests
     [TestClass()]
     public class ReportingCloudUnitTest
     {
-        string sUsername = "username";
-        string sPassword = "password";
+        string sUsername = "bjoern@textcontrol.com";
+        string sPassword = "Visions#22";
         Uri uriBasePath = new Uri("http://api.reporting.cloud");
 
         [TestMethod()]

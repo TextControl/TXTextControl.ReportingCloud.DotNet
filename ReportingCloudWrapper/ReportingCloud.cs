@@ -33,12 +33,12 @@ namespace TXTextControl.ReportingCloud
     /// </summary>
     /// <param name="Username">The username (e-mail address) of your ReportingCloud account.</param>
     /// <param name="Password">The password of your ReportingCloud account.</param>
-    /// <param name="WebApiBaseUrl">The Web API base URL of ReportingCloud. This Base URL is listed here: http://api.reporting.cloud/documentation/reference/</param>
-    public ReportingCloud(string Username, string Password, Uri WebApiBaseUrl)
+    /// <param name="webApiBaseUrl">The Web API base URL of ReportingCloud. This Base URL is listed here: http://api.reporting.cloud/documentation/reference/</param>
+    public ReportingCloud(string username, string password, Uri webApiBaseUrl)
     {
-        m_sUsername = Username;
-        m_sPassword = Password;
-        m_sWebApiBaseUrl = WebApiBaseUrl;
+        m_sUsername = username;
+        m_sPassword = password;
+        m_sWebApiBaseUrl = webApiBaseUrl;
     }
 
     /*-------------------------------------------------------------------------------------------------------
@@ -94,13 +94,13 @@ namespace TXTextControl.ReportingCloud
     /// <summary>
     /// This method returns a list of thumbnails of a specific template.
     /// </summary>
-    /// <param name="TemplateName">The name of the template that should be used to create the thumbnails.</param>
+    /// <param name="templateName">The name of the template that should be used to create the thumbnails.</param>
     /// <param name="ZoomFactor">The desired zoom factor of the thumbnails.</param>
     /// <param name="FromPage">The first page of the template that should be created as thumbnails.</param>
     /// <param name="ToPage">The last page of the template that should be created as thumbnails.</param>
-    /// <param name="ImageFormat">The image format of the returned thumbnail images.</param>
-    public List<System.Drawing.Image> GetTemplateThumbnails(string TemplateName, int ZoomFactor,
-        int FromPage = 1, int ToPage = 0, ImageFormat ImageFormat = ImageFormat.PNG)
+    /// <param name="imageFormat">The image format of the returned thumbnail images.</param>
+    public List<System.Drawing.Image> GetTemplateThumbnails(string templateName, int zoomFactor,
+        int fromPage = 1, int toPage = 0, ImageFormat imageFormat = ImageFormat.PNG)
     {
         // create a new list of System.Drawing.Image
         List<System.Drawing.Image> lImageThumbnails = new List<System.Drawing.Image>();
@@ -110,11 +110,11 @@ namespace TXTextControl.ReportingCloud
         {
             // set the endpoint and pass the query paramaters
             HttpResponseMessage response =
-                client.GetAsync("v1/templates/thumbnails?templateName=" + TemplateName +
-                "&zoomFactor=" + ZoomFactor +
-                "&fromPage=" + FromPage.ToString() +
-                "&toPage=" + ToPage.ToString() +
-                "&imageFormat=" + ImageFormat.ToString()).Result;
+                client.GetAsync("v1/templates/thumbnails?templateName=" + templateName +
+                "&zoomFactor=" + zoomFactor +
+                "&fromPage=" + fromPage.ToString() +
+                "&toPage=" + toPage.ToString() +
+                "&imageFormat=" + imageFormat.ToString()).Result;
 
             // if sucessful, return the image list
             if (response.IsSuccessStatusCode)
@@ -159,19 +159,19 @@ namespace TXTextControl.ReportingCloud
     /// <param name="TemplateName">The name of the template in the template storage.</param>
     /// <param name="ReturnFormat">The document format of the resulting document.</param>
     /// <param name="Append">Specifies whether the resulting documents should be appended or not.</param>
-    public List<string> MergeDocument(MergeBody MergeBody,
-        string TemplateName = null,
-        ReturnFormat ReturnFormat = ReturnFormat.PDF,
-        bool Append = true)
+    public List<string> MergeDocument(MergeBody mergeBody,
+        string templateName = null,
+        ReturnFormat returnFormat = ReturnFormat.PDF,
+        bool append = true)
     {
         // create a new HttpClient using the Factory method CreateHttpClient
         using (HttpClient client = CreateHttpClient())
         {
             // set the endpoint and pass the query paramaters
             // MergeBody is posted as a JSON object
-            HttpResponseMessage response = client.PostAsync("v1/document/merge?templateName=" + TemplateName +
-                "&returnFormat=" + ReturnFormat.ToString() +
-                "&append=" + Append.ToString(), MergeBody, formatter).Result;
+            HttpResponseMessage response = client.PostAsync("v1/document/merge?templateName=" + templateName +
+                "&returnFormat=" + returnFormat.ToString() +
+                "&append=" + append.ToString(), mergeBody, formatter).Result;
 
             // if sucessful, return the image list
             if (response.IsSuccessStatusCode)
@@ -201,15 +201,15 @@ namespace TXTextControl.ReportingCloud
     /// </summary>
     /// <param name="TemplateName">The destination name of the template in the template storage.</param>
     /// <param name="Template">The template data encoded as a Base64 string.</param>
-    public void UploadTemplate(string TemplateName, string Template)
+    public void UploadTemplate(string templateName, string template)
     {
         // create a new HttpClient using the Factory method CreateHttpClient
         using (HttpClient client = CreateHttpClient())
         {
             // set the endpoint and pass the query paramaters
             // Template is posted as a JSON object
-            HttpResponseMessage response = client.PostAsync("v1/templates/upload?templateName=" + TemplateName,
-                Template, formatter).Result;
+            HttpResponseMessage response = client.PostAsync("v1/templates/upload?templateName=" + templateName,
+                template, formatter).Result;
 
             // throw exception with the message from the endpoint
             if (!response.IsSuccessStatusCode)
@@ -234,15 +234,15 @@ namespace TXTextControl.ReportingCloud
     /// </summary>
     /// <param name="Document">The source document data encoded as a Base64 string.</param>
     /// <param name="ReturnFormat">The document format of the resulting document.</param>
-    public string ConvertDocument(string Document, ReturnFormat ReturnFormat)
+    public string ConvertDocument(string document, ReturnFormat returnFormat)
     {
         // create a new HttpClient using the Factory method CreateHttpClient
         using (HttpClient client = CreateHttpClient())
         {
             // set the endpoint and pass the query paramaters
             // Template is posted as a JSON object
-            HttpResponseMessage response = client.PostAsync("v1/document/convert?returnFormat=" + ReturnFormat,
-                Document, formatter).Result;
+            HttpResponseMessage response = client.PostAsync("v1/document/convert?returnFormat=" + returnFormat,
+                document, formatter).Result;
 
             // if sucessful, return the image list
             if (response.IsSuccessStatusCode)
@@ -328,15 +328,15 @@ namespace TXTextControl.ReportingCloud
     /// <summary>
     /// This method checks whether a template exists or not in the template storage.
     /// </summary>
-    /// <param name="TemplateName">The source document data encoded as a Base64 string.</param>
-    public bool TemplateExists(string TemplateName)
+    /// <param name="templateName">The source document data encoded as a Base64 string.</param>
+    public bool TemplateExists(string templateName)
     {
         // create a new HttpClient using the Factory method CreateHttpClient
         using (HttpClient client = CreateHttpClient())
         {
             // set the endpoint
             // no query parameters
-            HttpResponseMessage response = client.GetAsync("v1/templates/exists?templateName=" + TemplateName).Result;
+            HttpResponseMessage response = client.GetAsync("v1/templates/exists?templateName=" + templateName).Result;
 
             // return an int, if successful
             if (response.IsSuccessStatusCode)
@@ -363,13 +363,13 @@ namespace TXTextControl.ReportingCloud
     /// This method delete a template from the template storage.
     /// </summary>
     /// <param name="TemplateName">The name of the template in the template storage.</param>
-    public void DeleteTemplate(string TemplateName)
+    public void DeleteTemplate(string templateName)
     {
         // create a new HttpClient using the Factory method CreateHttpClient
         using (HttpClient client = CreateHttpClient())
         {
             // set the endpoint and pass the query paramaters
-            HttpResponseMessage response = client.DeleteAsync("v1/templates/delete/?templateName=" + TemplateName).Result;
+            HttpResponseMessage response = client.DeleteAsync("v1/templates/delete/?templateName=" + templateName).Result;
 
             // throw exception with the message from the endpoint
             if (!response.IsSuccessStatusCode)
@@ -391,13 +391,13 @@ namespace TXTextControl.ReportingCloud
     /// This method returns a template from the template storage as a Base64 encoded string.
     /// </summary>
     /// <param name="TemplateName">The name of the template in the template storage.</param>
-    public string DownloadTemplate(string TemplateName)
+    public string DownloadTemplate(string templateName)
     {
         // create a new HttpClient using the Factory method CreateHttpClient
         using (HttpClient client = CreateHttpClient())
         {
             // set the endpoint and pass the query paramaters
-            HttpResponseMessage response = client.GetAsync("v1/templates/download/?templateName=" + TemplateName).Result;
+            HttpResponseMessage response = client.GetAsync("v1/templates/download/?templateName=" + templateName).Result;
 
             // return an the document, if successful
             if (response.IsSuccessStatusCode)
@@ -424,13 +424,13 @@ namespace TXTextControl.ReportingCloud
     /// This method returns the number of pages of a template in the temnplate storage.
     /// </summary>
     /// <param name="TemplateName">The name of the template in the template storage.</param>
-    public int GetTemplatePageCount(string TemplateName)
+    public int GetTemplatePageCount(string templateName)
     {
         // create a new HttpClient using the Factory method CreateHttpClient
         using (HttpClient client = CreateHttpClient())
         {
             // set the endpoint and pass the query paramaters
-            HttpResponseMessage response = client.GetAsync("v1/templates/pagecount/?templateName=" + TemplateName).Result;
+            HttpResponseMessage response = client.GetAsync("v1/templates/pagecount/?templateName=" + templateName).Result;
 
             // return an the document, if successful
             if (response.IsSuccessStatusCode)
