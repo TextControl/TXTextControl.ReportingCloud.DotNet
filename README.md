@@ -18,7 +18,7 @@ The ReportingCloud PHP wrapper ships with a number of .NET unit tests. The scrip
 
 You will find the Text Control ReportingCloud .NET Wrapper as a NuGet package available on NuGet:
 
-  PM> Install-Package ServiceStack -Version 3.9.71
+    PM> Install-Package ServiceStack -Version 3.9.71
 
 ## Contributing
 
