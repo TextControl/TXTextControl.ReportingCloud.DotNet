@@ -10,6 +10,12 @@ Before using ReportingCloud, please sign up to the service:
 
 [http://api.reporting.cloud](http://api.reporting.cloud)
 
+## API Documentation
+
+The complete API documentation can be found in the GitHub page of this project:
+
+[textcontrol.github.io/TXTextControl.ReportingCloud.DotNet/]
+
 ## Username and password for unittests
 
 The ReportingCloud PHP wrapper ships with a number of .NET unit tests. The scripts in each of these directories require a username and password for ReportingCloud in order to be executed. So that your username and password are not made inadvertently publicly available via a public GIT repository, you will first need to specify them.
