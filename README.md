@@ -14,6 +14,12 @@ Before using ReportingCloud, please sign up to the service:
 
 The complete API documentation can be found in the GitHub page of this project:
 
+[http://textcontrol.github.io/TXTextControl.ReportingCloud.DotNet/api.html](http://textcontrol.github.io/TXTextControl.ReportingCloud.DotNet/api.html)
+
+## Getting Started
+
+This getting started tutorial helps to create your first application using the ReportingCloud .NET wrapper:
+
 [http://textcontrol.github.io/TXTextControl.ReportingCloud.DotNet/](http://textcontrol.github.io/TXTextControl.ReportingCloud.DotNet/)
 
 ## Username and password for unittests
