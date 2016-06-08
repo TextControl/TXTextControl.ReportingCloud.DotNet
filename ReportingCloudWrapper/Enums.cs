@@ -15,12 +15,33 @@ namespace TXTextControl.ReportingCloud
     /// </summary>
     public enum ReturnFormat
     {
+        /// <summary>
+        /// Adobe PDF
+        /// </summary>
         PDF,
+        /// <summary>
+        /// Adobe PDF/A
+        /// </summary>
         PDFA,
+        /// <summary>
+        /// Microsoft Word 97-2003
+        /// </summary>
         DOC,
+        /// <summary>
+        /// Microsoft Office Open XML
+        /// </summary>
         DOCX,
+        /// <summary>
+        /// Rich Text Format
+        /// </summary>
         RTF,
+        /// <summary>
+        /// TX Text Control Internal Format
+        /// </summary>
         TX,
+        /// <summary>
+        /// Hypertext Markup Language
+        /// </summary>
         HTML
     }
 
@@ -33,9 +54,21 @@ namespace TXTextControl.ReportingCloud
     /// </summary>
     public enum ImageFormat
     {
+        /// <summary>
+        /// Joint Photographic Experts Group
+        /// </summary>
         JPG,
+        /// <summary>
+        /// Portable Network Graphics
+        /// </summary>
         PNG,
+        /// <summary>
+        /// Windows Bitmap
+        /// </summary>
         BMP,
+        /// <summary>
+        /// Graphics Interchange Format
+        /// </summary>
         GIF
     }
 }

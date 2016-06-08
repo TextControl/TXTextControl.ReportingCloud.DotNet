@@ -14,13 +14,16 @@ using System.Net.Http;
 using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 
+/// <summary>
+/// This namespace contains classes for the Text Control ReportingCloud .NET wrapper
+/// </summary>
 namespace TXTextControl.ReportingCloud
 {
     /*-------------------------------------------------------------------------------------------------------
     // ** ReportingCloud **
     // This class contains the implementation of the ReportingCloud wrapper for .NET
     *-----------------------------------------------------------------------------------------------------*/
-    /// <summary>Text Control ReportingCloud .NET Wrapper class.</summary>
+    /// <summary>Text Control ReportingCloud .NET wrapper class.</summary>
     public class ReportingCloud
     {
     /*-------------------------------------------------------------------------------------------------------
@@ -31,8 +34,8 @@ namespace TXTextControl.ReportingCloud
     /// ReportingCloud constructor. Use your ReportingCloud credentials and the Web API base URL
     /// to create a new instance of ReportingCloud.
     /// </summary>
-    /// <param name="Username">The username (e-mail address) of your ReportingCloud account.</param>
-    /// <param name="Password">The password of your ReportingCloud account.</param>
+    /// <param name="username">The username (e-mail address) of your ReportingCloud account.</param>
+    /// <param name="password">The password of your ReportingCloud account.</param>
     /// <param name="webApiBaseUrl">The Web API base URL of ReportingCloud. This Base URL is listed here: http://api.reporting.cloud/documentation/reference/</param>
     public ReportingCloud(string username, string password, Uri webApiBaseUrl)
     {
@@ -47,13 +50,13 @@ namespace TXTextControl.ReportingCloud
     private string m_sUsername;
     private string m_sPassword;
     private Uri m_sWebApiBaseUrl;
-    JsonMediaTypeFormatter formatter = new JsonMediaTypeFormatter();
+    private JsonMediaTypeFormatter formatter = new JsonMediaTypeFormatter();
 
     /*-------------------------------------------------------------------------------------------------------
     // ** Properties **
     *-----------------------------------------------------------------------------------------------------*/
     /// <summary>
-    /// The username (e-mail address) of your ReportingCloud account.
+    /// The username (e-mail address) of the ReportingCloud account.
     /// </summary>
     public string Username
     {
@@ -62,7 +65,7 @@ namespace TXTextControl.ReportingCloud
     }
 
     /// <summary>
-    /// The password of your ReportingCloud account.
+    /// The password of the ReportingCloud account.
     /// </summary>
     public string Password
     {
@@ -71,7 +74,7 @@ namespace TXTextControl.ReportingCloud
     }
 
     /// <summary>
-    /// The Web API base URL of ReportingCloud. This Base URL is listed here: http://api.reporting.cloud/documentation/reference/
+    /// The Web API base URL of ReportingCloud. Available URLs are listed here: http://api.reporting.cloud/documentation/reference/
     /// </summary>
     public Uri WebApiBaseUrl
     {
@@ -92,12 +95,12 @@ namespace TXTextControl.ReportingCloud
     // Return value: A List of System.Drawing.Image
     *-----------------------------------------------------------------------------------------------------*/
     /// <summary>
-    /// This method returns a list of thumbnails of a specific template.
+    /// This method returns a list of thumbnails of a specific template in the template storage.
     /// </summary>
     /// <param name="templateName">The name of the template that should be used to create the thumbnails.</param>
-    /// <param name="ZoomFactor">The desired zoom factor of the thumbnails.</param>
-    /// <param name="FromPage">The first page of the template that should be created as thumbnails.</param>
-    /// <param name="ToPage">The last page of the template that should be created as thumbnails.</param>
+    /// <param name="zoomFactor">The desired zoom factor of the thumbnails.</param>
+    /// <param name="fromPage">The first page of the template that should be created as thumbnails.</param>
+    /// <param name="toPage">The last page of the template that should be created as thumbnails.</param>
     /// <param name="imageFormat">The image format of the returned thumbnail images.</param>
     public List<System.Drawing.Image> GetTemplateThumbnails(string templateName, int zoomFactor,
         int fromPage = 1, int toPage = 0, ImageFormat imageFormat = ImageFormat.PNG)
@@ -155,10 +158,10 @@ namespace TXTextControl.ReportingCloud
     /// <summary>
     /// This method merges a template with data.
     /// </summary>
-    /// <param name="MergeBody">The MergeBody object contains the data, optionally a template and merge settings.</param>
-    /// <param name="TemplateName">The name of the template in the template storage.</param>
-    /// <param name="ReturnFormat">The document format of the resulting document.</param>
-    /// <param name="Append">Specifies whether the resulting documents should be appended or not.</param>
+    /// <param name="mergeBody">The MergeBody object contains the data, optionally a template and merge settings.</param>
+    /// <param name="templateName">The name of the template in the template storage.</param>
+    /// <param name="returnFormat">The document format of the resulting document.</param>
+    /// <param name="append">Specifies whether the resulting documents should be appended or not.</param>
     public List<string> MergeDocument(MergeBody mergeBody,
         string templateName = null,
         ReturnFormat returnFormat = ReturnFormat.PDF,
@@ -199,8 +202,8 @@ namespace TXTextControl.ReportingCloud
     /// <summary>
     /// This method uploads a template to the template storage.
     /// </summary>
-    /// <param name="TemplateName">The destination name of the template in the template storage.</param>
-    /// <param name="Template">The template data encoded as a Base64 string.</param>
+    /// <param name="templateName">The destination name of the template in the template storage.</param>
+    /// <param name="template">The template data encoded as a Base64 string.</param>
     public void UploadTemplate(string templateName, string template)
     {
         // create a new HttpClient using the Factory method CreateHttpClient
@@ -232,8 +235,8 @@ namespace TXTextControl.ReportingCloud
     /// <summary>
     /// This method converts a document to another format.
     /// </summary>
-    /// <param name="Document">The source document data encoded as a Base64 string.</param>
-    /// <param name="ReturnFormat">The document format of the resulting document.</param>
+    /// <param name="document">The source document data encoded as a Base64 string.</param>
+    /// <param name="returnFormat">The document format of the resulting document.</param>
     public string ConvertDocument(string document, ReturnFormat returnFormat)
     {
         // create a new HttpClient using the Factory method CreateHttpClient
@@ -360,9 +363,9 @@ namespace TXTextControl.ReportingCloud
     // Return value: void
     *-----------------------------------------------------------------------------------------------------*/
     /// <summary>
-    /// This method delete a template from the template storage.
+    /// This method deletes a template from the template storage.
     /// </summary>
-    /// <param name="TemplateName">The name of the template in the template storage.</param>
+    /// <param name="templateName">The name of the template in the template storage.</param>
     public void DeleteTemplate(string templateName)
     {
         // create a new HttpClient using the Factory method CreateHttpClient
@@ -390,7 +393,7 @@ namespace TXTextControl.ReportingCloud
     /// <summary>
     /// This method returns a template from the template storage as a Base64 encoded string.
     /// </summary>
-    /// <param name="TemplateName">The name of the template in the template storage.</param>
+    /// <param name="templateName">The name of the template in the template storage.</param>
     public string DownloadTemplate(string templateName)
     {
         // create a new HttpClient using the Factory method CreateHttpClient
@@ -421,9 +424,9 @@ namespace TXTextControl.ReportingCloud
     // Return value: int
     *-----------------------------------------------------------------------------------------------------*/
     /// <summary>
-    /// This method returns the number of pages of a template in the temnplate storage.
+    /// This method returns the number of pages of a template in the template storage.
     /// </summary>
-    /// <param name="TemplateName">The name of the template in the template storage.</param>
+    /// <param name="templateName">The name of the template in the template storage.</param>
     public int GetTemplatePageCount(string templateName)
     {
         // create a new HttpClient using the Factory method CreateHttpClient
@@ -508,6 +511,11 @@ namespace TXTextControl.ReportingCloud
     // ** EncodeTo64 **
     // This static method encodes a string to Base64
     *-----------------------------------------------------------------------------------------------------*/
+    /// <summary>
+    /// This method encodes a string to a Base64 string.
+    /// </summary>
+    /// <param name="toEncode">The string to encode.</param>
+    /// <returns></returns>
     static public string EncodeTo64(string toEncode)
     {
         byte[] toEncodeAsBytes = System.Text.ASCIIEncoding.ASCII.GetBytes(toEncode);
