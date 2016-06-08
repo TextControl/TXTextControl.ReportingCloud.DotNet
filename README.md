@@ -1,4 +1,4 @@
-![Logo](https://raw.githubusercontent.com/TextControl/txtextcontrol.reportingcloud.dotnet/master/resource/rc_logo_512.png)
+![Logo](https://raw.githubusercontent.com/TextControl/TXTextControl.ReportingCloud.Dotnet/master/resource/rc_logo_512.png)
 
 #  ReportingCloud .NET Wrapper
 
