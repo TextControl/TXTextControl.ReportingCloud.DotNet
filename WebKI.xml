@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="AccountSettings class">
+    <HelpKINode Title="AccountSettings Class" Url="html/60f52afc-3832-d50a-e6dc-5358c8993bbd.htm" />
+    <HelpKINode Title="about AccountSettings class" Url="html/60f52afc-3832-d50a-e6dc-5358c8993bbd.htm" />
+    <HelpKINode Title="constructor" Url="html/7907c391-647b-f2d2-c698-6344dec8fdd8.htm" />
+    <HelpKINode Title="methods" Url="html/4478e0d9-8af8-43a8-5ab9-f45e21c75dd7.htm" />
+    <HelpKINode Title="properties" Url="html/ef5a2b0c-30d7-f972-3efa-0341981a67d9.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AccountSettings.AccountSettings constructor" Url="html/7907c391-647b-f2d2-c698-6344dec8fdd8.htm" />
+  <HelpKINode Title="AccountSettings.CreatedDocuments property" Url="html/16cb521b-92fb-b6e7-84f3-0010823e7fb1.htm" />
+  <HelpKINode Title="AccountSettings.MaxDocuments property" Url="html/ca346b5a-5a55-646c-ba54-a49433ec384c.htm" />
+  <HelpKINode Title="AccountSettings.MaxTemplates property" Url="html/19883874-d244-1c0a-02d5-d4dde7d57a43.htm" />
+  <HelpKINode Title="AccountSettings.SerialNumber property" Url="html/31c42eba-a449-c473-d24b-fb40f97be3c1.htm" />
+  <HelpKINode Title="AccountSettings.UploadedTemplates property" Url="html/ab6ec440-9cc0-8569-a46a-428be884d57b.htm" />
+  <HelpKINode Title="AccountSettings.ValidUntil property" Url="html/f9378586-eb33-cc40-9d69-7be9a40160d8.htm" />
+  <HelpKINode Title="Author property" Url="html/fb9b717d-6736-d972-5ec5-11a0db36382d.htm" />
+  <HelpKINode Title="BMP enumeration member" Url="html/9cf4cce4-2cb7-393c-512f-4fbaf088c0b1.htm" />
+  <HelpKINode Title="ConvertDocument method" Url="html/fe77d3f6-b6c3-344e-3862-ee09ffde36c3.htm" />
+  <HelpKINode Title="CreatedDocuments property" Url="html/16cb521b-92fb-b6e7-84f3-0010823e7fb1.htm" />
+  <HelpKINode Title="CreationDate property" Url="html/24312fa9-ad60-7d84-a451-092db82e8947.htm" />
+  <HelpKINode Title="CreatorApplication property" Url="html/e03f97b0-7cb3-951a-f52d-55e7a4ffd742.htm" />
+  <HelpKINode Title="DeleteTemplate method" Url="html/b1bd910a-b9df-5e08-2f69-d8282ede8074.htm" />
+  <HelpKINode Title="DOC enumeration member" Url="html/4e7d4d1e-6d9a-f210-8bbc-758dc4ce11fe.htm" />
+  <HelpKINode Title="DocumentSubject property" Url="html/d36a61ca-34cc-03ce-30ab-d2ef93b4b559.htm" />
+  <HelpKINode Title="DocumentTitle property" Url="html/a1efa241-394b-a1a2-3db1-1bf537bae6c6.htm" />
+  <HelpKINode Title="DOCX enumeration member" Url="html/4e7d4d1e-6d9a-f210-8bbc-758dc4ce11fe.htm" />
+  <HelpKINode Title="DownloadTemplate method" Url="html/65f36ade-5da0-5f38-0806-b0aa9f342c5b.htm" />
+  <HelpKINode Title="EncodeTo64 method" Url="html/2d3abfa5-f624-5872-e68a-87a55f18d129.htm" />
+  <HelpKINode Title="GetAccountSettings method" Url="html/4a1f9176-7ee1-3b8f-3293-22a02645aa6f.htm" />
+  <HelpKINode Title="GetTemplateCount method" Url="html/0394bbef-9c76-c8b7-a662-b203eb854818.htm" />
+  <HelpKINode Title="GetTemplatePageCount method" Url="html/1416868f-2015-75c1-193a-ea713dc4aaf9.htm" />
+  <HelpKINode Title="GetTemplateThumbnails method" Url="html/a95de8fb-f5a7-06aa-a572-cfe2ebc25884.htm" />
+  <HelpKINode Title="GIF enumeration member" Url="html/9cf4cce4-2cb7-393c-512f-4fbaf088c0b1.htm" />
+  <HelpKINode Title="HTML enumeration member" Url="html/4e7d4d1e-6d9a-f210-8bbc-758dc4ce11fe.htm" />
+  <HelpKINode Title="ImageFormat enumeration" Url="html/9cf4cce4-2cb7-393c-512f-4fbaf088c0b1.htm" />
+  <HelpKINode Title="JPG enumeration member" Url="html/9cf4cce4-2cb7-393c-512f-4fbaf088c0b1.htm" />
+  <HelpKINode Title="LastModificationDate property" Url="html/057bb174-6cbf-6928-668e-6ccffe6ae8cd.htm" />
+  <HelpKINode Title="ListTemplates method" Url="html/85c041b3-c0d3-d256-1352-28ad3954f02e.htm" />
+  <HelpKINode Title="MaxDocuments property" Url="html/ca346b5a-5a55-646c-ba54-a49433ec384c.htm" />
+  <HelpKINode Title="MaxTemplates property" Url="html/19883874-d244-1c0a-02d5-d4dde7d57a43.htm" />
+  <HelpKINode Title="MergeBody class">
+    <HelpKINode Title="MergeBody Class" Url="html/8dac64ac-9e03-c9a5-828b-d052a40a868a.htm" />
+    <HelpKINode Title="about MergeBody class" Url="html/8dac64ac-9e03-c9a5-828b-d052a40a868a.htm" />
+    <HelpKINode Title="constructor" Url="html/ba8c975c-6480-3124-c8f6-17ffbbc94a78.htm" />
+    <HelpKINode Title="methods" Url="html/a668cb29-a97a-fe84-9e00-8819617f42f7.htm" />
+    <HelpKINode Title="properties" Url="html/acb978b6-5b8a-e233-90bf-c479d403a80a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MergeBody.MergeBody constructor" Url="html/ba8c975c-6480-3124-c8f6-17ffbbc94a78.htm" />
+  <HelpKINode Title="MergeBody.MergeData property" Url="html/2a18e15e-8651-96a0-f3bf-cd19145306e6.htm" />
+  <HelpKINode Title="MergeBody.MergeSettings property" Url="html/4cdc6325-853f-c595-4350-0a741fdd4eee.htm" />
+  <HelpKINode Title="MergeBody.Template property" Url="html/13c5d80f-1c0f-062d-bd3a-a6de26b5a759.htm" />
+  <HelpKINode Title="MergeData property" Url="html/2a18e15e-8651-96a0-f3bf-cd19145306e6.htm" />
+  <HelpKINode Title="MergeDocument method" Url="html/1decae9d-4134-09cf-310d-966ccee14133.htm" />
+  <HelpKINode Title="MergeSettings class">
+    <HelpKINode Title="MergeSettings Class" Url="html/a787965e-f9a2-6eec-b455-7e9938cf0ea3.htm" />
+    <HelpKINode Title="about MergeSettings class" Url="html/a787965e-f9a2-6eec-b455-7e9938cf0ea3.htm" />
+    <HelpKINode Title="constructor" Url="html/9850cd1e-4622-2e3d-ac13-66a4b7f1f8b4.htm" />
+    <HelpKINode Title="methods" Url="html/c522a9fd-b8de-a335-bab6-050f850991d3.htm" />
+    <HelpKINode Title="properties" Url="html/bfc3aad7-bf54-0414-c981-abef9643bdb2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MergeSettings property" Url="html/4cdc6325-853f-c595-4350-0a741fdd4eee.htm" />
+  <HelpKINode Title="MergeSettings.Author property" Url="html/fb9b717d-6736-d972-5ec5-11a0db36382d.htm" />
+  <HelpKINode Title="MergeSettings.CreationDate property" Url="html/24312fa9-ad60-7d84-a451-092db82e8947.htm" />
+  <HelpKINode Title="MergeSettings.CreatorApplication property" Url="html/e03f97b0-7cb3-951a-f52d-55e7a4ffd742.htm" />
+  <HelpKINode Title="MergeSettings.DocumentSubject property" Url="html/d36a61ca-34cc-03ce-30ab-d2ef93b4b559.htm" />
+  <HelpKINode Title="MergeSettings.DocumentTitle property" Url="html/a1efa241-394b-a1a2-3db1-1bf537bae6c6.htm" />
+  <HelpKINode Title="MergeSettings.LastModificationDate property" Url="html/057bb174-6cbf-6928-668e-6ccffe6ae8cd.htm" />
+  <HelpKINode Title="MergeSettings.MergeSettings constructor" Url="html/9850cd1e-4622-2e3d-ac13-66a4b7f1f8b4.htm" />
+  <HelpKINode Title="MergeSettings.RemoveEmptyBlocks property" Url="html/a5d6246f-bd74-d8ec-1f10-4a345be4a3ff.htm" />
+  <HelpKINode Title="MergeSettings.RemoveEmptyFields property" Url="html/d921ad29-c6df-412a-54fc-3b7b1ac853ce.htm" />
+  <HelpKINode Title="MergeSettings.RemoveEmptyImages property" Url="html/4bc0d01f-e674-2df2-cc07-10d627390af7.htm" />
+  <HelpKINode Title="MergeSettings.RemoveTrailingWhitespace property" Url="html/02077ab7-c9fb-a52d-3776-ea1937f6e036.htm" />
+  <HelpKINode Title="MergeSettings.UserPassword property" Url="html/23ead233-70ed-bbad-1d45-0120490d50a4.htm" />
+  <HelpKINode Title="Modified property" Url="html/f1b0c991-b8e0-e917-947b-c723106d2cfd.htm" />
+  <HelpKINode Title="Password property" Url="html/90f9029b-f153-1105-d2ce-a2d01b610d7b.htm" />
+  <HelpKINode Title="PDF enumeration member" Url="html/4e7d4d1e-6d9a-f210-8bbc-758dc4ce11fe.htm" />
+  <HelpKINode Title="PDFA enumeration member" Url="html/4e7d4d1e-6d9a-f210-8bbc-758dc4ce11fe.htm" />
+  <HelpKINode Title="PNG enumeration member" Url="html/9cf4cce4-2cb7-393c-512f-4fbaf088c0b1.htm" />
+  <HelpKINode Title="RemoveEmptyBlocks property" Url="html/a5d6246f-bd74-d8ec-1f10-4a345be4a3ff.htm" />
+  <HelpKINode Title="RemoveEmptyFields property" Url="html/d921ad29-c6df-412a-54fc-3b7b1ac853ce.htm" />
+  <HelpKINode Title="RemoveEmptyImages property" Url="html/4bc0d01f-e674-2df2-cc07-10d627390af7.htm" />
+  <HelpKINode Title="RemoveTrailingWhitespace property" Url="html/02077ab7-c9fb-a52d-3776-ea1937f6e036.htm" />
+  <HelpKINode Title="ReportingCloud class">
+    <HelpKINode Title="ReportingCloud Class" Url="html/3c630195-aa8f-6934-04c9-b107dd8a8aa8.htm" />
+    <HelpKINode Title="about ReportingCloud class" Url="html/3c630195-aa8f-6934-04c9-b107dd8a8aa8.htm" />
+    <HelpKINode Title="constructor" Url="html/f32e4f8f-2971-95ef-a23f-f177f4dbf883.htm" />
+    <HelpKINode Title="methods" Url="html/6d416e82-b12e-94b3-fead-784cd4870681.htm" />
+    <HelpKINode Title="properties" Url="html/962a617a-3a1d-28b6-a07c-4224a8ace05e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ReportingCloud.ConvertDocument method" Url="html/fe77d3f6-b6c3-344e-3862-ee09ffde36c3.htm" />
+  <HelpKINode Title="ReportingCloud.DeleteTemplate method" Url="html/b1bd910a-b9df-5e08-2f69-d8282ede8074.htm" />
+  <HelpKINode Title="ReportingCloud.DownloadTemplate method" Url="html/65f36ade-5da0-5f38-0806-b0aa9f342c5b.htm" />
+  <HelpKINode Title="ReportingCloud.EncodeTo64 method" Url="html/2d3abfa5-f624-5872-e68a-87a55f18d129.htm" />
+  <HelpKINode Title="ReportingCloud.GetAccountSettings method" Url="html/4a1f9176-7ee1-3b8f-3293-22a02645aa6f.htm" />
+  <HelpKINode Title="ReportingCloud.GetTemplateCount method" Url="html/0394bbef-9c76-c8b7-a662-b203eb854818.htm" />
+  <HelpKINode Title="ReportingCloud.GetTemplatePageCount method" Url="html/1416868f-2015-75c1-193a-ea713dc4aaf9.htm" />
+  <HelpKINode Title="ReportingCloud.GetTemplateThumbnails method" Url="html/a95de8fb-f5a7-06aa-a572-cfe2ebc25884.htm" />
+  <HelpKINode Title="ReportingCloud.ListTemplates method" Url="html/85c041b3-c0d3-d256-1352-28ad3954f02e.htm" />
+  <HelpKINode Title="ReportingCloud.MergeDocument method" Url="html/1decae9d-4134-09cf-310d-966ccee14133.htm" />
+  <HelpKINode Title="ReportingCloud.Password property" Url="html/90f9029b-f153-1105-d2ce-a2d01b610d7b.htm" />
+  <HelpKINode Title="ReportingCloud.ReportingCloud constructor" Url="html/f32e4f8f-2971-95ef-a23f-f177f4dbf883.htm" />
+  <HelpKINode Title="ReportingCloud.TemplateExists method" Url="html/8089e1a6-4243-ec52-6827-8baa058058a0.htm" />
+  <HelpKINode Title="ReportingCloud.UploadTemplate method" Url="html/975b99c2-769d-015b-7d84-420866b3d148.htm" />
+  <HelpKINode Title="ReportingCloud.Username property" Url="html/d56f5244-9b12-592c-ae49-2ec70c281d2f.htm" />
+  <HelpKINode Title="ReportingCloud.WebApiBaseUrl property" Url="html/46200641-0e15-1632-cee8-a9001e0dc4bb.htm" />
+  <HelpKINode Title="ReturnFormat enumeration" Url="html/4e7d4d1e-6d9a-f210-8bbc-758dc4ce11fe.htm" />
+  <HelpKINode Title="RTF enumeration member" Url="html/4e7d4d1e-6d9a-f210-8bbc-758dc4ce11fe.htm" />
+  <HelpKINode Title="SerialNumber property" Url="html/31c42eba-a449-c473-d24b-fb40f97be3c1.htm" />
+  <HelpKINode Title="Size property" Url="html/70b2b773-824b-986b-be05-23e41da61e73.htm" />
+  <HelpKINode Title="Template class">
+    <HelpKINode Title="Template Class" Url="html/7f0a9dc0-8a38-5e73-3740-318b360ef3c2.htm" />
+    <HelpKINode Title="about Template class" Url="html/7f0a9dc0-8a38-5e73-3740-318b360ef3c2.htm" />
+    <HelpKINode Title="constructor" Url="html/68504867-1ad1-4f79-4ce4-e3f4d41cf447.htm" />
+    <HelpKINode Title="methods" Url="html/c8d4f919-8828-099b-517d-70d5f28cce27.htm" />
+    <HelpKINode Title="properties" Url="html/d3dafb8f-0a35-1b78-e4e2-e11cb4af46a7.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Template property" Url="html/13c5d80f-1c0f-062d-bd3a-a6de26b5a759.htm" />
+  <HelpKINode Title="Template.Modified property" Url="html/f1b0c991-b8e0-e917-947b-c723106d2cfd.htm" />
+  <HelpKINode Title="Template.Size property" Url="html/70b2b773-824b-986b-be05-23e41da61e73.htm" />
+  <HelpKINode Title="Template.Template constructor" Url="html/68504867-1ad1-4f79-4ce4-e3f4d41cf447.htm" />
+  <HelpKINode Title="Template.TemplateName property" Url="html/63edc5f3-78bc-5f46-6299-5976ee3ea18a.htm" />
+  <HelpKINode Title="TemplateExists method" Url="html/8089e1a6-4243-ec52-6827-8baa058058a0.htm" />
+  <HelpKINode Title="TemplateName property" Url="html/63edc5f3-78bc-5f46-6299-5976ee3ea18a.htm" />
+  <HelpKINode Title="TX enumeration member" Url="html/4e7d4d1e-6d9a-f210-8bbc-758dc4ce11fe.htm" />
+  <HelpKINode Title="TXTextControl.ReportingCloud namespace" Url="html/7d4e86de-0392-6c94-0254-55af82e8a2ed.htm" />
+  <HelpKINode Title="TXTextControl.ReportingCloud.AccountSettings class" Url="html/60f52afc-3832-d50a-e6dc-5358c8993bbd.htm" />
+  <HelpKINode Title="TXTextControl.ReportingCloud.ImageFormat enumeration" Url="html/9cf4cce4-2cb7-393c-512f-4fbaf088c0b1.htm" />
+  <HelpKINode Title="TXTextControl.ReportingCloud.MergeBody class" Url="html/8dac64ac-9e03-c9a5-828b-d052a40a868a.htm" />
+  <HelpKINode Title="TXTextControl.ReportingCloud.MergeSettings class" Url="html/a787965e-f9a2-6eec-b455-7e9938cf0ea3.htm" />
+  <HelpKINode Title="TXTextControl.ReportingCloud.ReportingCloud class" Url="html/3c630195-aa8f-6934-04c9-b107dd8a8aa8.htm" />
+  <HelpKINode Title="TXTextControl.ReportingCloud.ReturnFormat enumeration" Url="html/4e7d4d1e-6d9a-f210-8bbc-758dc4ce11fe.htm" />
+  <HelpKINode Title="TXTextControl.ReportingCloud.Template class" Url="html/7f0a9dc0-8a38-5e73-3740-318b360ef3c2.htm" />
+  <HelpKINode Title="UploadedTemplates property" Url="html/ab6ec440-9cc0-8569-a46a-428be884d57b.htm" />
+  <HelpKINode Title="UploadTemplate method" Url="html/975b99c2-769d-015b-7d84-420866b3d148.htm" />
+  <HelpKINode Title="Username property" Url="html/d56f5244-9b12-592c-ae49-2ec70c281d2f.htm" />
+  <HelpKINode Title="UserPassword property" Url="html/23ead233-70ed-bbad-1d45-0120490d50a4.htm" />
+  <HelpKINode Title="ValidUntil property" Url="html/f9378586-eb33-cc40-9d69-7be9a40160d8.htm" />
+  <HelpKINode Title="WebApiBaseUrl property" Url="html/46200641-0e15-1632-cee8-a9001e0dc4bb.htm" />
+</HelpKI>
