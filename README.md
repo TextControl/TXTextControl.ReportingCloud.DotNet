@@ -20,7 +20,7 @@ The complete API documentation can be found in the GitHub page of this project:
 
 This getting started tutorial helps to create your first application using the ReportingCloud .NET wrapper:
 
-[http://textcontrol.github.io/TXTextControl.ReportingCloud.DotNet/](http://textcontrol.github.io/TXTextControl.ReportingCloud.DotNet/)
+[http://textcontrol.github.io/TXTextControl.ReportingCloud.DotNet/](ReportingCloud .NET Wrapper Documentation - Getting Started)
 
 ## Username and password for unittests
 
