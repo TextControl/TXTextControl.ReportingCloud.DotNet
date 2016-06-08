@@ -14,7 +14,7 @@ Before using ReportingCloud, please sign up to the service:
 
 The complete API documentation can be found in the GitHub page of this project:
 
-[textcontrol.github.io/TXTextControl.ReportingCloud.DotNet/]
+[textcontrol.github.io/TXTextControl.ReportingCloud.DotNet/](textcontrol.github.io/TXTextControl.ReportingCloud.DotNet/)
 
 ## Username and password for unittests
 
