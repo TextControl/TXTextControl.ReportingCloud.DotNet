@@ -75,10 +75,12 @@ namespace TXTextControl.ReportingCloud.Tests
                 body.MergeData = invoice;
 
                 // merge the document
-                List<string> results = rc.MergeDocument(body, sTempFilename, ReturnFormat.HTML);
+                List<byte[]> results = rc.MergeDocument(body, sTempFilename, ReturnFormat.HTML);
 
+                string bHtmlDocument = System.Text.Encoding.UTF8.GetString(results[0]);
+                
                 // check whether the created HTML contains the test string
-                Assert.IsTrue(results[0].Contains("Test_R667663"));
+                Assert.IsTrue(bHtmlDocument.Contains("Test_R667663"));
 
                 // delete the template
                 rc.DeleteTemplate(sTempFilename);
@@ -101,11 +103,8 @@ namespace TXTextControl.ReportingCloud.Tests
                 string sTempFilename = "test" + Guid.NewGuid().ToString() + ".tx";
                 rc.UploadTemplate(sTempFilename, bDocument);
 
-                // download document
-                string sTemplate = rc.DownloadTemplate(sTempFilename);
-
-                // compare documents
-                Assert.AreEqual(Convert.ToBase64String(bDocument), sTemplate, "Documents do not match");
+                // template exists?
+                Assert.IsTrue(rc.TemplateExists(sTempFilename), "Template doesn't exist");
 
                 rc.DeleteTemplate(sTempFilename);
             }
@@ -125,9 +124,9 @@ namespace TXTextControl.ReportingCloud.Tests
                 // upload 1 more document with unique file name
                 byte[] bDocument = File.ReadAllBytes("documents/invoice.tx");
 
-                string sHtml = rc.ConvertDocument(bDocument, ReturnFormat.HTML);
+                byte[] bHtml = rc.ConvertDocument(bDocument, ReturnFormat.HTML);
 
-                Assert.IsTrue(sHtml.Contains("INVOICE"));
+                Assert.IsTrue(System.Text.Encoding.UTF8.GetString(bHtml).Contains("INVOICE"));
             }
             catch (Exception exc)
             {
@@ -252,10 +251,10 @@ namespace TXTextControl.ReportingCloud.Tests
                 rc.UploadTemplate(sTempFilename, bDocument);
 
                 // download document
-                string sTemplate = rc.DownloadTemplate(sTempFilename);
+                byte[] bTemplate = rc.DownloadTemplate(sTempFilename);
 
                 // compare documents
-                Assert.AreEqual(Convert.ToBase64String(bDocument), sTemplate, "Documents do not match");
+                Assert.IsNotNull(bTemplate);
 
                 rc.DeleteTemplate(sTempFilename);
             }

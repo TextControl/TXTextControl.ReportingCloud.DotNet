@@ -169,7 +169,7 @@ namespace TXTextControl.ReportingCloud
     //  - ReturnFormat ReturnFormat (default = PDF)
     //  - bool Append (default = true)
     //
-    // Return value: A List of strings (the documents as Base64 encoded strings)
+    // Return value: A List of byte[]
     *-----------------------------------------------------------------------------------------------------*/
     /// <summary>
     /// This method merges a template with data.
@@ -178,7 +178,7 @@ namespace TXTextControl.ReportingCloud
     /// <param name="templateName">The name of the template in the template storage.</param>
     /// <param name="returnFormat">The document format of the resulting document.</param>
     /// <param name="append">Specifies whether the resulting documents should be appended or not.</param>
-    public List<string> MergeDocument(MergeBody mergeBody,
+    public List<byte[]> MergeDocument(MergeBody mergeBody,
         string templateName = null,
         ReturnFormat returnFormat = ReturnFormat.PDF,
         bool append = true)
@@ -195,7 +195,15 @@ namespace TXTextControl.ReportingCloud
             // if sucessful, return the image list
             if (response.IsSuccessStatusCode)
             {
-                return response.Content.ReadAsAsync<List<string>>().Result;
+                List<byte[]> bResults = new List<byte[]>();
+
+                foreach (string sResult in response.Content.ReadAsAsync<List<string>>().Result)
+                {
+                    bResults.Add(Convert.FromBase64String(sResult));
+                }
+
+                return bResults;
+                //return response.Content.ReadAsAsync<List<string>>().Result;
             }
             else
             {
@@ -251,9 +259,9 @@ namespace TXTextControl.ReportingCloud
     /// <summary>
     /// This method converts a document to another format.
     /// </summary>
-    /// <param name="document">The source document data encoded as a Base64 string.</param>
+    /// <param name="document">The source document data as a byte array.</param>
     /// <param name="returnFormat">The document format of the resulting document.</param>
-    public string ConvertDocument(byte[] document, ReturnFormat returnFormat)
+    public byte[] ConvertDocument(byte[] document, ReturnFormat returnFormat)
     {
         // create a new HttpClient using the Factory method CreateHttpClient
         using (HttpClient client = CreateHttpClient())
@@ -263,10 +271,10 @@ namespace TXTextControl.ReportingCloud
             HttpResponseMessage response = client.PostAsync("v1/document/convert?returnFormat=" + returnFormat,
                 Convert.ToBase64String(document), formatter).Result;
 
-            // if sucessful, return the image list
+            // if sucessful, return the document list
             if (response.IsSuccessStatusCode)
             {
-                return response.Content.ReadAsAsync<string>().Result;
+                return Convert.FromBase64String(response.Content.ReadAsAsync<string>().Result);
             }
             else
             {
@@ -404,13 +412,13 @@ namespace TXTextControl.ReportingCloud
     //
     // Parameters:
     //  - string TemplateName
-    // Return value: string (the document as a Base64 string)
+    // Return value: byte[]
     *-----------------------------------------------------------------------------------------------------*/
     /// <summary>
-    /// This method returns a template from the template storage as a Base64 encoded string.
+    /// This method returns a template from the template storage as a byte array.
     /// </summary>
     /// <param name="templateName">The name of the template in the template storage.</param>
-    public string DownloadTemplate(string templateName)
+    public byte[] DownloadTemplate(string templateName)
     {
         // create a new HttpClient using the Factory method CreateHttpClient
         using (HttpClient client = CreateHttpClient())
@@ -421,7 +429,7 @@ namespace TXTextControl.ReportingCloud
             // return an the document, if successful
             if (response.IsSuccessStatusCode)
             {
-                return response.Content.ReadAsAsync<string>().Result;
+                return Convert.FromBase64String(response.Content.ReadAsAsync<string>().Result);
             }
             else
             {
