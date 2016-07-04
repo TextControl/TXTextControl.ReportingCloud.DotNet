@@ -18,7 +18,7 @@ namespace TXTextControl.ReportingCloud.Tests
         {
             try
             {
-                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword);
             }
             catch (Exception exc)
             {
@@ -31,7 +31,7 @@ namespace TXTextControl.ReportingCloud.Tests
         {
             try
             {
-                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword);
 
                 // upload 1 more document with unique file name
                 byte[] bDocument = File.ReadAllBytes("documents/invoice.tx");
@@ -58,7 +58,7 @@ namespace TXTextControl.ReportingCloud.Tests
         {
             try
             {
-                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword);
 
                 // upload 1 more document with unique file name
                 byte[] bDocument = File.ReadAllBytes("documents/invoice.tx");
@@ -94,7 +94,7 @@ namespace TXTextControl.ReportingCloud.Tests
         {
             try
             {
-                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword);
 
                 // upload 1 more document with unique file name
                 byte[] bDocument = File.ReadAllBytes("documents/invoice.tx");
@@ -120,7 +120,7 @@ namespace TXTextControl.ReportingCloud.Tests
         {
             try
             {
-                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword);
 
                 // upload 1 more document with unique file name
                 byte[] bDocument = File.ReadAllBytes("documents/invoice.tx");
@@ -140,7 +140,7 @@ namespace TXTextControl.ReportingCloud.Tests
         {
             try
             {
-                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword);
 
                 AccountSettings settings = rc.GetAccountSettings();
 
@@ -166,7 +166,7 @@ namespace TXTextControl.ReportingCloud.Tests
         {
             try
             {
-                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword);
 
                 // store current template number
                 int iTemplateCount = rc.GetTemplateCount();
@@ -193,7 +193,7 @@ namespace TXTextControl.ReportingCloud.Tests
         {
             try
             {
-                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword);
 
                 // upload 1 more document with unique file name
                 byte[] bDocument = File.ReadAllBytes("documents/invoice.tx");
@@ -217,7 +217,7 @@ namespace TXTextControl.ReportingCloud.Tests
         {
             try
             {
-                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword);
 
                 // upload test document
                 byte[] bDocument = File.ReadAllBytes("documents/invoice.tx");
@@ -244,7 +244,7 @@ namespace TXTextControl.ReportingCloud.Tests
         {
             try
             {
-                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword);
 
                 // upload local test document
                 byte[] bDocument = File.ReadAllBytes("documents/invoice.tx");
@@ -270,7 +270,7 @@ namespace TXTextControl.ReportingCloud.Tests
         {
             try
             {
-                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword);
 
                 // list all templates
                 List<Template> templates = rc.ListTemplates();
