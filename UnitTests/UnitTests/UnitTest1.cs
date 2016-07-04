@@ -36,7 +36,7 @@ namespace TXTextControl.ReportingCloud.Tests
                 // upload 1 more document with unique file name
                 byte[] bDocument = File.ReadAllBytes("documents/invoice.tx");
                 string sTempFilename = "test" + Guid.NewGuid().ToString() + ".tx";
-                rc.UploadTemplate(sTempFilename, Convert.ToBase64String(bDocument));
+                rc.UploadTemplate(sTempFilename, bDocument);
 
                 // create thumbnails
                 List<System.Drawing.Image> images = rc.GetTemplateThumbnails(sTempFilename, 20, 1, 1, ImageFormat.PNG);
@@ -63,7 +63,7 @@ namespace TXTextControl.ReportingCloud.Tests
                 // upload 1 more document with unique file name
                 byte[] bDocument = File.ReadAllBytes("documents/invoice.tx");
                 string sTempFilename = "test" + Guid.NewGuid().ToString() + ".tx";
-                rc.UploadTemplate(sTempFilename, Convert.ToBase64String(bDocument));
+                rc.UploadTemplate(sTempFilename, bDocument);
 
                 // create dummy data
                 Invoice invoice = new Invoice();
@@ -99,7 +99,7 @@ namespace TXTextControl.ReportingCloud.Tests
                 // upload 1 more document with unique file name
                 byte[] bDocument = File.ReadAllBytes("documents/invoice.tx");
                 string sTempFilename = "test" + Guid.NewGuid().ToString() + ".tx";
-                rc.UploadTemplate(sTempFilename, Convert.ToBase64String(bDocument));
+                rc.UploadTemplate(sTempFilename, bDocument);
 
                 // download document
                 string sTemplate = rc.DownloadTemplate(sTempFilename);
@@ -125,7 +125,7 @@ namespace TXTextControl.ReportingCloud.Tests
                 // upload 1 more document with unique file name
                 byte[] bDocument = File.ReadAllBytes("documents/invoice.tx");
 
-                string sHtml = rc.ConvertDocument(Convert.ToBase64String(bDocument), ReturnFormat.HTML);
+                string sHtml = rc.ConvertDocument(bDocument, ReturnFormat.HTML);
 
                 Assert.IsTrue(sHtml.Contains("INVOICE"));
             }
@@ -147,7 +147,7 @@ namespace TXTextControl.ReportingCloud.Tests
                 // upload 1 more document with unique file name
                 byte[] bDocument = File.ReadAllBytes("documents/invoice.tx");
                 string sTempFilename = "test" + Guid.NewGuid().ToString() + ".tx";
-                rc.UploadTemplate(sTempFilename, Convert.ToBase64String(bDocument));
+                rc.UploadTemplate(sTempFilename, bDocument);
 
                 // check, if the count went up
                 Assert.AreEqual(settings.UploadedTemplates + 1, rc.GetTemplateCount());
@@ -174,7 +174,7 @@ namespace TXTextControl.ReportingCloud.Tests
                 // upload 1 more document with unique file name
                 byte[] bDocument = File.ReadAllBytes("documents/invoice.tx");
                 string sTempFilename = "test" + Guid.NewGuid().ToString() + ".tx";
-                rc.UploadTemplate(sTempFilename, Convert.ToBase64String(bDocument));
+                rc.UploadTemplate(sTempFilename, bDocument);
 
                 // check, if the count went up
                 Assert.AreEqual(iTemplateCount + 1, rc.GetTemplateCount());
@@ -198,7 +198,7 @@ namespace TXTextControl.ReportingCloud.Tests
                 // upload 1 more document with unique file name
                 byte[] bDocument = File.ReadAllBytes("documents/invoice.tx");
                 string sTempFilename = "test" + Guid.NewGuid().ToString() + ".tx";
-                rc.UploadTemplate(sTempFilename, Convert.ToBase64String(bDocument));
+                rc.UploadTemplate(sTempFilename, bDocument);
 
                 // check, if the count went up
                 Assert.AreEqual(1, rc.GetTemplatePageCount(sTempFilename));
@@ -222,7 +222,7 @@ namespace TXTextControl.ReportingCloud.Tests
                 // upload test document
                 byte[] bDocument = File.ReadAllBytes("documents/invoice.tx");
                 string sTempFilename = "test" + Guid.NewGuid().ToString() + ".tx";
-                rc.UploadTemplate(sTempFilename, Convert.ToBase64String(bDocument));
+                rc.UploadTemplate(sTempFilename, bDocument);
 
                 if (rc.TemplateExists(sTempFilename) == true)
                 {
@@ -249,7 +249,7 @@ namespace TXTextControl.ReportingCloud.Tests
                 // upload local test document
                 byte[] bDocument = File.ReadAllBytes("documents/invoice.tx");
                 string sTempFilename = "test" + Guid.NewGuid().ToString() + ".tx";
-                rc.UploadTemplate(sTempFilename, Convert.ToBase64String(bDocument));
+                rc.UploadTemplate(sTempFilename, bDocument);
 
                 // download document
                 string sTemplate = rc.DownloadTemplate(sTempFilename);

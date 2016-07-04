@@ -15,14 +15,16 @@ namespace TXTextControl.ReportingCloud
     /// </summary>
     public class MergeBody
     {
+        private string sTemplate = String.Empty;
+
         /// <summary>
         /// The datasource for the merge process as a JSON array.
         /// </summary>
         public object MergeData { get; set; }
         /// <summary>
-        /// Optional. The template encoded as a Base64 string. Supported formats are RTF, DOC, DOCX and TX.
+        /// Optional. The template as a Byte array. Supported formats are RTF, DOC, DOCX and TX.
         /// </summary>
-        public string Template { get; set; }
+        public byte[] Template { get; set; }
         /// <summary>
         /// Optional. Optional merge settings to specify merge properties and document properties such as title and author.
         /// </summary>

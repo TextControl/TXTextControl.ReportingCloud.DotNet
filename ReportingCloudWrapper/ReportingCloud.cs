@@ -45,11 +45,27 @@ namespace TXTextControl.ReportingCloud
     }
 
     /*-------------------------------------------------------------------------------------------------------
+    // ** ReportingCloud Constructor **
+    // Only registered users with a valid Username, Password are allowed
+    *-----------------------------------------------------------------------------------------------------*/
+    /// <summary>
+    /// ReportingCloud constructor. Use your ReportingCloud credentials
+    /// to create a new instance of ReportingCloud.
+    /// </summary>
+    /// <param name="username">The username (e-mail address) of your ReportingCloud account.</param>
+    /// <param name="password">The password of your ReportingCloud account.</param>
+    public ReportingCloud(string username, string password)
+    {
+        m_sUsername = username;
+        m_sPassword = password;
+    }
+
+    /*-------------------------------------------------------------------------------------------------------
     // ** Member fields **
     *-----------------------------------------------------------------------------------------------------*/
     private string m_sUsername;
     private string m_sPassword;
-    private Uri m_sWebApiBaseUrl;
+    private Uri m_sWebApiBaseUrl = new Uri("https://api.reporting.cloud");
     private JsonMediaTypeFormatter formatter = new JsonMediaTypeFormatter();
 
     /*-------------------------------------------------------------------------------------------------------
@@ -204,7 +220,7 @@ namespace TXTextControl.ReportingCloud
     /// </summary>
     /// <param name="templateName">The destination name of the template in the template storage.</param>
     /// <param name="template">The template data encoded as a Base64 string.</param>
-    public void UploadTemplate(string templateName, string template)
+    public void UploadTemplate(string templateName, byte[] template)
     {
         // create a new HttpClient using the Factory method CreateHttpClient
         using (HttpClient client = CreateHttpClient())
@@ -212,7 +228,7 @@ namespace TXTextControl.ReportingCloud
             // set the endpoint and pass the query paramaters
             // Template is posted as a JSON object
             HttpResponseMessage response = client.PostAsync("v1/templates/upload?templateName=" + templateName,
-                template, formatter).Result;
+                Convert.ToBase64String(template), formatter).Result;
 
             // throw exception with the message from the endpoint
             if (!response.IsSuccessStatusCode)
@@ -237,7 +253,7 @@ namespace TXTextControl.ReportingCloud
     /// </summary>
     /// <param name="document">The source document data encoded as a Base64 string.</param>
     /// <param name="returnFormat">The document format of the resulting document.</param>
-    public string ConvertDocument(string document, ReturnFormat returnFormat)
+    public string ConvertDocument(byte[] document, ReturnFormat returnFormat)
     {
         // create a new HttpClient using the Factory method CreateHttpClient
         using (HttpClient client = CreateHttpClient())
@@ -245,7 +261,7 @@ namespace TXTextControl.ReportingCloud
             // set the endpoint and pass the query paramaters
             // Template is posted as a JSON object
             HttpResponseMessage response = client.PostAsync("v1/document/convert?returnFormat=" + returnFormat,
-                document, formatter).Result;
+                Convert.ToBase64String(document), formatter).Result;
 
             // if sucessful, return the image list
             if (response.IsSuccessStatusCode)
