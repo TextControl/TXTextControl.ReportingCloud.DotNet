@@ -1,14 +1,116 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="refresh" content="1;url=html/7d4e86de-0392-6c94-0254-55af82e8a2ed.htm">
-	<script type="text/javascript">
-		window.location.replace("html/7d4e86de-0392-6c94-0254-55af82e8a2ed.htm")
-	</script>
-	<title>ReportingCloud .NET Wrapper API Documentation - Redirect</title>
+	<title>ReportingCloud .NET Wrapper Documentation - Getting Started</title>
 </head>
+<style>
+body {
+	margin: 0;
+	font-family: 'Segoe UI' , 'Lucida Grande' , Verdana, Arial, Helvetica, sans-serif;
+}
+.nav-wrapper {
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+	padding: 17px;
+	background-color: #009fe3;
+	background-image: url('http://api.reporting.cloud/Content/Images/logo_withtx.png');
+	background-repeat: no-repeat;
+	background-position: 15px;
+}
+.nuget {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #202020;
+    border: 4px solid silver;
+    box-shadow: 2px 2px 3px #6e6e6e;
+    color: #e2e2e2;
+    line-height: 1.5em;
+    font: 1.2em 'andale mono','lucida console',monospace;
+    overflow: auto;
+    display: inline-block;
+}
+.main-body {
+	padding: 0 20px;
+}
+</style>
 <body>
-	<p>If you are not redirected automatically, follow this link to the <a href="html/7d4e86de-0392-6c94-0254-55af82e8a2ed.htm">default topic</a>.</p>
+	<div class="nav-wrapper">&nbsp;</div>
+	<div class="main-body">
+		<h1>ReportingCloud .NET Wrapper Documentation - Getting Started</h1>
+		
+		<ol>
+            <li>
+                <p>Register and create a free trial account with ReportingCloud:</p>
+                <p><a target="_blank" href="http://api.reporting.cloud/Account/Register/">Register</a></p>
+            </li>
+            <li>
+                <p>Start Visual Studio 2015 and create a new <em>ASP.NET Web Application</em>. Select <em>Empty</em> as the <em>Template</em> and check <em>MVC</em> to add the folders and core references:</p>
+                <img style="border: 1px solid #c2c2c2; margin-bottom: 10px;" src="img/doc_dotnet_mvc_new.png" />
+            </li>
+            <li>
+                <p>Open the <em>Package Manager Console</em> from the <em>NuGet Package Manager</em> menu item of the <em>Tools</em> main menu.</p>
+                <p>Type in the following command:</p>
+                <p class="nuget">PM> Install-Package TXTextControl.ReportingCloud -Version 0.0.105.00</p>
+            </li>
+            <li>
+                <p>In the <em>Solution Explorer</em>, right-click the <em>Controllers</em> folder and choose <em>Add -> Controller</em> from the opened context menu. In the opened dialog box, choose <em>MVC 5 Controller - Empty</em> and confirm with <em>Add</em>. Name the newly created controller <em>HomeController</em> and add it by clicking <em>Add</em>.</p>
+            </li>
+            <li>
+                <p>Add the following code to your controller and replace <em>username</em> and <em>password</em> with your ReportingCloud credentials:</p>
+                <script src="https://gist.github.com/bjoerntx/25e590f8fb13be1cb6318e565031790d.js"></script>
+                <p>The <em>ListTemplates</em> method returns a list of all templates in the template storage which is returned to the view.</p>
+            </li>
+            <li>
+                <p>In the <em>Solution Explorer</em>, right-click the newly created folder <em>Views -> Home</em> and choose <em>Add -> View</em> from the context menu. Name the view <em>Index</em> and confirm with <em>Add</em>.</p>
+            </li>
+            <li>
+                <p>Add the following code to the newly created view:</p>
+                <script src="https://gist.github.com/bjoerntx/ab21978c28eaefa60868261470750fe8.js"></script>
+            </li>
+            <li>
+                <p>Compile and start the application. The view lists all your templates from your template storage:</p>
+                <img style="border: 1px solid #c2c2c2; margin-bottom: 10px;" src="img/doc_dotnet_mvc_template.png" />
+            </li>
+        </ol>
+		
+		<h2 class="text-thin">Merge the Sample Template</h2>
+
+        <p>To follow the steps of this tutorial, you will need at least a trial license for <em>ReportingCloud</em>.</p>
+
+        <ol>
+            <li>
+                <p>Start Visual Studio 2015 and create a new <em>ASP.NET Web Application</em>. Select <em>Empty</em> as the <em>Template</em> and check <em>MVC</em> to add the folders and core references:</p>
+                <img style="border: 1px solid #c2c2c2; margin-bottom: 10px;" src="img/doc_dotnet_mvc_new.png" />
+            </li>
+            <li>
+                <p>Open the <em>Package Manager Console</em> from the <em>NuGet Package Manager</em> menu item of the <em>Tools</em> main menu.</p>
+                <p>Type in the following command:</p>
+                <p class="nuget">PM> Install-Package TXTextControl.ReportingCloud -Version 0.0.105.00</p>
+            </li>
+            <li>
+                <p>In the <em>Solution Explorer</em>, right-click the <em>Controllers</em> folder and choose <em>Add -> Controller</em> from the opened context menu. In the opened dialog box, choose <em>MVC 5 Controller - Empty</em> and confirm with <em>Add</em>. Name the newly created controller <em>HomeController</em> and add it by clicking <em>Add</em>.</p>
+            </li>
+            <li>
+                <p>Add the following code to your controller and replace <em>username</em> and <em>password</em> with your ReportingCloud credentials:</p>
+                <script src="https://gist.github.com/bjoerntx/29cacb76834d32482c385843baf65ffe.js"></script>
+                <p>The class <em>Invoice</em> is the data object for the merge process. The instance of this class can be simply passed to the <em>MergeData</em> property of the <em>MergeBody</em> object along with an optional <em>MergeSettings</em> object.</p>
+            </li>
+            <li>
+                <p>In the <em>Solution Explorer</em>, right-click the newly created folder <em>Views -> Home</em> and choose <em>Add -> View</em> from the context menu. Name the view <em>Index</em> and confirm with <em>Add</em>.</p>
+            </li>
+            <li>
+                <p>Add the following code to the newly created view:</p>
+                <script src="https://gist.github.com/bjoerntx/5afc88c4a4d6a3bc47e4f18239cb0cee.js"></script>
+            </li>
+            <li>
+                <p>Compile and start the application. The first document of the created results will be rendered as HTML in the view:</p>
+                <img style="border: 1px solid #c2c2c2; margin-bottom: 10px;" src="img/doc_dotnet_mvc_merge.png" />
+            </li>
+        </ol>
+	</div>
 </body>
 </html>
+
+    Status API Training Shop Blog About 
+
+    © 2016 GitHub, Inc. Terms Privacy Security Contact Help 
+
