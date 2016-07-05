@@ -24,7 +24,7 @@ This getting started tutorial helps to create your first application using the R
 
 ## Username and password for unittests
 
-The ReportingCloud PHP wrapper ships with a number of .NET unit tests. The scripts in each of these directories require a username and password for ReportingCloud in order to be executed. So that your username and password are not made inadvertently publicly available via a public GIT repository, you will first need to specify them.
+The ReportingCloud .NET wrapper ships with a number of .NET unit tests. The scripts in each of these directories require a username and password for ReportingCloud in order to be executed. So that your username and password are not made inadvertently publicly available via a public GIT repository, you will first need to specify them.
 
 ## Installation
 
