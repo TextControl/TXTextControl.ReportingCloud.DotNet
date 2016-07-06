@@ -8,7 +8,7 @@ This is the official .NET wrapper for ReportingCloud, which is authored, maintai
 
 Before using ReportingCloud, please sign up to the service:
 
-[http://api.reporting.cloud](http://api.reporting.cloud)
+[https://portal.reporting.cloud](https://portal.reporting.cloud)
 
 ## API Documentation
 
