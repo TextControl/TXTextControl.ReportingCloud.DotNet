@@ -119,7 +119,7 @@ namespace TXTextControl.ReportingCloud
     /// <param name="toPage">The last page of the template that should be created as thumbnails.</param>
     /// <param name="imageFormat">The image format of the returned thumbnail images.</param>
     public List<System.Drawing.Image> GetTemplateThumbnails(string templateName, int zoomFactor,
-        int fromPage = 1, int toPage = 0, ImageFormat imageFormat = ImageFormat.PNG)
+    int fromPage = 1, int toPage = 0, ImageFormat imageFormat = ImageFormat.PNG)
     {
         // create a new list of System.Drawing.Image
         List<System.Drawing.Image> lImageThumbnails = new List<System.Drawing.Image>();
@@ -275,6 +275,36 @@ namespace TXTextControl.ReportingCloud
             if (response.IsSuccessStatusCode)
             {
                 return Convert.FromBase64String(response.Content.ReadAsAsync<string>().Result);
+            }
+            else
+            {
+                // throw exception with the message from the endpoint
+                throw new ArgumentException(response.Content.ReadAsStringAsync().Result);
+            }
+        }
+    }
+
+        /*-------------------------------------------------------------------------------------------------------
+        // ** GetTemplateInfo **
+        // This method implements the "v1/templates/info" Web API call
+        //
+        // Return value: TemplateInfo object
+        *-----------------------------------------------------------------------------------------------------*/
+        /// <summary>
+        /// This method returns template information.
+        /// </summary>
+        public TemplateInfo GetTemplateInfo(string templateName)
+        {
+        // create a new HttpClient using the Factory method CreateHttpClient
+        using (HttpClient client = CreateHttpClient())
+        {
+            // set the endpoint
+            // no query parameters
+            HttpResponseMessage response = client.GetAsync("v1/templates/info?templateName=" + templateName).Result;
+
+            if (response.IsSuccessStatusCode)
+            {
+                return response.Content.ReadAsAsync<TemplateInfo>().Result;
             }
             else
             {
@@ -481,7 +511,7 @@ namespace TXTextControl.ReportingCloud
     /// <summary>
     /// This method lists all templates stored in the template storage.
     /// </summary>
-        public List<Template> ListTemplates()
+    public List<Template> ListTemplates()
     {
         // create a new HttpClient using the Factory method CreateHttpClient
         using (HttpClient client = CreateHttpClient())
