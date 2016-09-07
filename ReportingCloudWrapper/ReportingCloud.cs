@@ -160,6 +160,49 @@ namespace TXTextControl.ReportingCloud
     }
 
     /*-------------------------------------------------------------------------------------------------------
+    // ** FindAndReplaceDocument **
+    // This method implements the "v1/document/findandreplace" Web API call
+    //
+    // Parameters:
+    //  - FindAndReplaceBody FindAndReplaceBody
+    //  - string TemplateName (default = null)
+    //  - ReturnFormat ReturnFormat (default = PDF)
+    //
+    // Return value: A List of byte[]
+    *-----------------------------------------------------------------------------------------------------*/
+    /// <summary>
+    /// This method replaces strings in a document.
+    /// </summary>
+    /// <param name="findAndReplaceBody">The FindAndReplaceBody object contains the replace data, optionally a template and merge settings.</param>
+    /// <param name="templateName">The name of the template in the template storage.</param>
+    /// <param name="returnFormat">The document format of the resulting document.</param>
+    public byte[] FindAndReplaceDocument(FindAndReplaceBody findAndReplaceBody,
+    string templateName = null,
+    ReturnFormat returnFormat = ReturnFormat.PDF)
+    {
+        // create a new HttpClient using the Factory method CreateHttpClient
+        using (HttpClient client = CreateHttpClient())
+        {
+            // set the endpoint and pass the query paramaters
+            // FindAndReplaceBody is posted as a JSON object
+            HttpResponseMessage response = client.PostAsync("v1/document/findandreplace?templateName=" + templateName +
+            "&returnFormat=" + returnFormat.ToString(),
+            findAndReplaceBody, formatter).Result;
+
+            // if successful, return the document list
+            if (response.IsSuccessStatusCode)
+            {
+                return Convert.FromBase64String(response.Content.ReadAsAsync<string>().Result);
+            }
+            else
+            {
+                // throw exception with the message from the endpoint
+                throw new ArgumentException(response.Content.ReadAsStringAsync().Result);
+            }
+            }
+    }
+
+    /*-------------------------------------------------------------------------------------------------------
     // ** MergeDocument **
     // This method implements the "v1/document/merge" Web API call
     //
@@ -179,9 +222,9 @@ namespace TXTextControl.ReportingCloud
     /// <param name="returnFormat">The document format of the resulting document.</param>
     /// <param name="append">Specifies whether the resulting documents should be appended or not.</param>
     public List<byte[]> MergeDocument(MergeBody mergeBody,
-        string templateName = null,
-        ReturnFormat returnFormat = ReturnFormat.PDF,
-        bool append = true)
+    string templateName = null,
+    ReturnFormat returnFormat = ReturnFormat.PDF,
+    bool append = true)
     {
         // create a new HttpClient using the Factory method CreateHttpClient
         using (HttpClient client = CreateHttpClient())

@@ -9,10 +9,9 @@ namespace TXTextControl.ReportingCloud.Tests
     [TestClass()]
     public class ReportingCloudUnitTest
     {
-        string sUsername = "bjoern@textcontrol.com";
-        string sPassword = "Visions#22";
+        string sUsername = "";
+        string sPassword = "";
         Uri uriBasePath = new Uri("https://api.reporting.cloud/");
-        //Uri uriBasePath = new Uri("http://localhost:10204/");
 
         [TestMethod()]
         public void ReportingCloudTest()
@@ -73,6 +72,43 @@ namespace TXTextControl.ReportingCloud.Tests
                 Assert.IsFalse((images.Count == 0));
 
                 // delete temp file
+                rc.DeleteTemplate(sTempFilename);
+            }
+            catch (Exception exc)
+            {
+                Assert.Fail(exc.Message);
+            }
+        }
+
+        [TestMethod()]
+        public void FindAndReplaceDocumentTest()
+        {
+            try
+            {
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+
+                // upload 1 more document with unique file name
+                byte[] bDocument = File.ReadAllBytes("documents/replace_template.tx");
+                string sTempFilename = "test" + Guid.NewGuid().ToString() + ".tx";
+                rc.UploadTemplate(sTempFilename, bDocument);
+
+                // create a new FindAndReplaceBody object
+                FindAndReplaceBody body = new FindAndReplaceBody();
+                body.FindAndReplaceData = new List<string[]>()
+                {
+                    new string[] { "%%TextToReplace%%", "ReplacedString" },
+                    new string[] { "%%SecondTextToReplace%%", "ReplacedString2" }
+                };
+
+                // merge the document
+                byte[] results = rc.FindAndReplaceDocument(body, sTempFilename, ReturnFormat.HTML);
+
+                string bHtmlDocument = System.Text.Encoding.UTF8.GetString(results);
+
+                // check whether the created HTML contains the test string
+                Assert.IsTrue(bHtmlDocument.Contains("ReplacedString"));
+
+                // delete the template
                 rc.DeleteTemplate(sTempFilename);
             }
             catch (Exception exc)

@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="AccountSettings.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="FindAndReplaceBody.cs" />
     <Compile Include="MergeBody.cs" />
     <Compile Include="MergeSettings.cs" />
     <Compile Include="ReportingCloud.cs" />
