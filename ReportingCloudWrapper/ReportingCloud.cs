@@ -176,9 +176,11 @@ namespace TXTextControl.ReportingCloud
     /// <param name="findAndReplaceBody">The FindAndReplaceBody object contains the replace data, optionally a template and merge settings.</param>
     /// <param name="templateName">The name of the template in the template storage.</param>
     /// <param name="returnFormat">The document format of the resulting document.</param>
+    /// <param name="test">Specifies whether it is a test run or not. A test run is not counted against the quota and created documents contain a watermark.</param>
     public byte[] FindAndReplaceDocument(FindAndReplaceBody findAndReplaceBody,
     string templateName = null,
-    ReturnFormat returnFormat = ReturnFormat.PDF)
+    ReturnFormat returnFormat = ReturnFormat.PDF,
+    bool test = false)
     {
         // create a new HttpClient using the Factory method CreateHttpClient
         using (HttpClient client = CreateHttpClient())
@@ -186,7 +188,7 @@ namespace TXTextControl.ReportingCloud
             // set the endpoint and pass the query paramaters
             // FindAndReplaceBody is posted as a JSON object
             HttpResponseMessage response = client.PostAsync("v1/document/findandreplace?templateName=" + templateName +
-            "&returnFormat=" + returnFormat.ToString(),
+            "&returnFormat=" + returnFormat.ToString() + "&test=" + test.ToString(),
             findAndReplaceBody, formatter).Result;
 
             // if successful, return the document list
@@ -221,10 +223,12 @@ namespace TXTextControl.ReportingCloud
     /// <param name="templateName">The name of the template in the template storage.</param>
     /// <param name="returnFormat">The document format of the resulting document.</param>
     /// <param name="append">Specifies whether the resulting documents should be appended or not.</param>
+    /// <param name="test">Specifies whether it is a test run or not. A test run is not counted against the quota and created documents contain a watermark.</param>
     public List<byte[]> MergeDocument(MergeBody mergeBody,
     string templateName = null,
     ReturnFormat returnFormat = ReturnFormat.PDF,
-    bool append = true)
+    bool append = true,
+    bool test = false)
     {
         // create a new HttpClient using the Factory method CreateHttpClient
         using (HttpClient client = CreateHttpClient())
@@ -233,7 +237,7 @@ namespace TXTextControl.ReportingCloud
             // MergeBody is posted as a JSON object
             HttpResponseMessage response = client.PostAsync("v1/document/merge?templateName=" + templateName +
                 "&returnFormat=" + returnFormat.ToString() +
-                "&append=" + append.ToString(), mergeBody, formatter).Result;
+                "&append=" + append.ToString() + "&test=" + test.ToString(), mergeBody, formatter).Result;
 
             // if sucessful, return the image list
             if (response.IsSuccessStatusCode)
@@ -304,14 +308,15 @@ namespace TXTextControl.ReportingCloud
     /// </summary>
     /// <param name="document">The source document data as a byte array.</param>
     /// <param name="returnFormat">The document format of the resulting document.</param>
-    public byte[] ConvertDocument(byte[] document, ReturnFormat returnFormat)
+    /// <param name="test">Specifies whether it is a test run or not. A test run is not counted against the quota and created documents contain a watermark.</param>
+    public byte[] ConvertDocument(byte[] document, ReturnFormat returnFormat, bool test = false)
     {
         // create a new HttpClient using the Factory method CreateHttpClient
         using (HttpClient client = CreateHttpClient())
         {
             // set the endpoint and pass the query paramaters
             // Template is posted as a JSON object
-            HttpResponseMessage response = client.PostAsync("v1/document/convert?returnFormat=" + returnFormat,
+            HttpResponseMessage response = client.PostAsync("v1/document/convert?returnFormat=" + returnFormat + "&test=" + test.ToString(),
                 Convert.ToBase64String(document), formatter).Result;
 
             // if sucessful, return the document list

@@ -12,7 +12,7 @@ namespace TXTextControl.ReportingCloud.Tests
         string sUsername = "";
         string sPassword = "";
         Uri uriBasePath = new Uri("https://api.reporting.cloud/");
-
+        
         [TestMethod()]
         public void ReportingCloudTest()
         {
