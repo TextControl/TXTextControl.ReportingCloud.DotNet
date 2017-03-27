@@ -581,15 +581,45 @@ namespace TXTextControl.ReportingCloud
     }
 
     /*-------------------------------------------------------------------------------------------------------
-    // ** Helpers **
+    // ** ListFonts **
+    // This method implements the "v1/fonts/list" Web API call
+    //
+    // Return value: string array of font names
     *-----------------------------------------------------------------------------------------------------*/
+        /// <summary>
+        /// This method lists all available fonts.
+        /// </summary>
+        public string[] ListFonts()
+        {
+            // create a new HttpClient using the Factory method CreateHttpClient
+            using (HttpClient client = CreateHttpClient())
+            {
+                // set the endpoint
+                HttpResponseMessage response = client.GetAsync("v1/fonts/list/").Result;
 
-    /*-------------------------------------------------------------------------------------------------------
-    // ** CreateHttpClient **
-    // This factory method creates and returns a HttpClient object with the
-    // proper headers, the base URL and the authorization
-    *-----------------------------------------------------------------------------------------------------*/
-    private HttpClient CreateHttpClient()
+                // return an the list, if succuessful
+                if (response.IsSuccessStatusCode)
+                {
+                    return response.Content.ReadAsAsync<string[]>().Result;
+                }
+                else
+                {
+                    // throw exception with the message from the endpoint
+                    throw new ArgumentException(response.Content.ReadAsStringAsync().Result);
+                }
+            }
+        }
+
+        /*-------------------------------------------------------------------------------------------------------
+        // ** Helpers **
+        *-----------------------------------------------------------------------------------------------------*/
+
+        /*-------------------------------------------------------------------------------------------------------
+        // ** CreateHttpClient **
+        // This factory method creates and returns a HttpClient object with the
+        // proper headers, the base URL and the authorization
+        *-----------------------------------------------------------------------------------------------------*/
+        private HttpClient CreateHttpClient()
     {
         // add the CamelCasePropertyNamesContractResolver to convert
         // the .NET parameter to JSON camelCase formatting

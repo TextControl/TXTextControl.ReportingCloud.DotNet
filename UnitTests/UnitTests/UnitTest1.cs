@@ -9,9 +9,9 @@ namespace TXTextControl.ReportingCloud.Tests
     [TestClass()]
     public class ReportingCloudUnitTest
     {
-        string sUsername = "";
-        string sPassword = "";
-        Uri uriBasePath = new Uri("https://api.reporting.cloud/");
+        string sUsername = "username";
+        string sPassword = "password";
+        Uri uriBasePath = new Uri("https://api.reporting.cloud");
         
         [TestMethod()]
         public void ReportingCloudTest()
@@ -337,6 +337,27 @@ namespace TXTextControl.ReportingCloud.Tests
 
                 // list all templates
                 List<Template> templates = rc.ListTemplates();
+            }
+            catch (Exception exc)
+            {
+                Assert.Fail(exc.Message);
+            }
+        }
+
+        [TestMethod()]
+        public void ListFonts()
+        {
+            try
+            {
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+
+                // list all templates
+                string[] fonts = rc.ListFonts();
+
+                foreach (string font in fonts)
+                {
+                    Console.WriteLine(font);
+                }
             }
             catch (Exception exc)
             {
