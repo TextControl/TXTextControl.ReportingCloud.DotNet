@@ -9,10 +9,10 @@ namespace TXTextControl.ReportingCloud.Tests
     [TestClass()]
     public class ReportingCloudUnitTest
     {
-        string sUsername = "username";
-        string sPassword = "password";
+        string sUsername = "";
+        string sPassword = "";
         Uri uriBasePath = new Uri("https://api.reporting.cloud");
-        
+
         [TestMethod()]
         public void ReportingCloudTest()
         {
@@ -133,10 +133,17 @@ namespace TXTextControl.ReportingCloud.Tests
                 Invoice invoice = new Invoice();
                 invoice.yourcompany_companyname = "Text Control, LLC";
                 invoice.invoice_no = "Test_R667663";
+                invoice.billto_name = "<html><strong>Test</strong> <em>Company</em></html>";
 
                 // create a new MergeBody object
                 MergeBody body = new MergeBody();
                 body.MergeData = invoice;
+
+                MergeSettings settings = new MergeSettings();
+                settings.Author = "Text Control GmbH";
+                settings.MergeHtml = true;
+
+                body.MergeSettings = settings;
 
                 // merge the document
                 List<byte[]> results = rc.MergeDocument(body, sTempFilename, ReturnFormat.HTML);
@@ -370,5 +377,6 @@ namespace TXTextControl.ReportingCloud.Tests
     {
         public string yourcompany_companyname { get; set; }
         public string invoice_no { get; set; }
+        public string billto_name { get; set; }
     }
 }

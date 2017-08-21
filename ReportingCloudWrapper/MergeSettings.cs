@@ -20,6 +20,10 @@ namespace TXTextControl.ReportingCloud
         /// </summary>
         public bool? RemoveEmptyFields { get; set; }
         /// <summary>
+        /// Optional. Specifies whether field data can contain formatted Html content or not. The default value is false.
+        /// </summary>
+        public bool? MergeHtml { get; set; }
+        /// <summary>
         /// Optional. Specifies whether the content of empty merge blocks should be removed from the template or not. The default value is true.
         /// </summary>
         public bool? RemoveEmptyBlocks { get; set; }
