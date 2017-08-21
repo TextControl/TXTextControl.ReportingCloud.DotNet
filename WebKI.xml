@@ -51,6 +51,7 @@
   <HelpKINode Title="ImageFormat enumeration" Url="html/9cf4cce4-2cb7-393c-512f-4fbaf088c0b1.htm" />
   <HelpKINode Title="JPG enumeration member" Url="html/9cf4cce4-2cb7-393c-512f-4fbaf088c0b1.htm" />
   <HelpKINode Title="LastModificationDate property" Url="html/057bb174-6cbf-6928-668e-6ccffe6ae8cd.htm" />
+  <HelpKINode Title="ListFonts method" Url="html/d5d5065b-a8fe-0e2f-9dc9-5d5898a36cf9.htm" />
   <HelpKINode Title="ListTemplates method" Url="html/85c041b3-c0d3-d256-1352-28ad3954f02e.htm" />
   <HelpKINode Title="MaxDocuments property" Url="html/ca346b5a-5a55-646c-ba54-a49433ec384c.htm" />
   <HelpKINode Title="MaxTemplates property" Url="html/19883874-d244-1c0a-02d5-d4dde7d57a43.htm" />
@@ -101,6 +102,7 @@
     <HelpKINode Title="MergeBlock.MergeFields Property " Url="html/08bbefe4-8fef-b0d4-533c-53870776c332.htm" />
     <HelpKINode Title="TemplateInfo.MergeFields Property " Url="html/3d2215ed-8a6d-cb02-98a7-dc5a80dc1042.htm" />
   </HelpKINode>
+  <HelpKINode Title="MergeHtml property" Url="html/f426ee5c-fe53-0bc5-5b06-cf0854d59da3.htm" />
   <HelpKINode Title="MergeSettings class">
     <HelpKINode Title="MergeSettings Class" Url="html/a787965e-f9a2-6eec-b455-7e9938cf0ea3.htm" />
     <HelpKINode Title="about MergeSettings class" Url="html/a787965e-f9a2-6eec-b455-7e9938cf0ea3.htm" />
@@ -118,6 +120,7 @@
   <HelpKINode Title="MergeSettings.DocumentSubject property" Url="html/d36a61ca-34cc-03ce-30ab-d2ef93b4b559.htm" />
   <HelpKINode Title="MergeSettings.DocumentTitle property" Url="html/a1efa241-394b-a1a2-3db1-1bf537bae6c6.htm" />
   <HelpKINode Title="MergeSettings.LastModificationDate property" Url="html/057bb174-6cbf-6928-668e-6ccffe6ae8cd.htm" />
+  <HelpKINode Title="MergeSettings.MergeHtml property" Url="html/f426ee5c-fe53-0bc5-5b06-cf0854d59da3.htm" />
   <HelpKINode Title="MergeSettings.MergeSettings constructor" Url="html/9850cd1e-4622-2e3d-ac13-66a4b7f1f8b4.htm" />
   <HelpKINode Title="MergeSettings.RemoveEmptyBlocks property" Url="html/a5d6246f-bd74-d8ec-1f10-4a345be4a3ff.htm" />
   <HelpKINode Title="MergeSettings.RemoveEmptyFields property" Url="html/d921ad29-c6df-412a-54fc-3b7b1ac853ce.htm" />
@@ -156,6 +159,7 @@
   <HelpKINode Title="ReportingCloud.GetTemplateInfo method" Url="html/1a13fa80-f307-3936-fdc4-2138089a00f6.htm" />
   <HelpKINode Title="ReportingCloud.GetTemplatePageCount method" Url="html/1416868f-2015-75c1-193a-ea713dc4aaf9.htm" />
   <HelpKINode Title="ReportingCloud.GetTemplateThumbnails method" Url="html/a95de8fb-f5a7-06aa-a572-cfe2ebc25884.htm" />
+  <HelpKINode Title="ReportingCloud.ListFonts method" Url="html/d5d5065b-a8fe-0e2f-9dc9-5d5898a36cf9.htm" />
   <HelpKINode Title="ReportingCloud.ListTemplates method" Url="html/85c041b3-c0d3-d256-1352-28ad3954f02e.htm" />
   <HelpKINode Title="ReportingCloud.MergeDocument method" Url="html/abee3876-fe1a-38b7-ee31-e6a3e08a287e.htm" />
   <HelpKINode Title="ReportingCloud.Password property" Url="html/90f9029b-f153-1105-d2ce-a2d01b610d7b.htm" />
