@@ -39,5 +39,13 @@ namespace TXTextControl.ReportingCloud
         /// Returns the date until the current subscription is valid. The date string includes the time zone of the server (UTC). Sample: 2016-06-06T11:25:44+00:00.
         /// </summary>
         public DateTime? ValidUntil { get; set; }
+        /// <summary>
+        /// The maximum number of proofing transactions per month.
+        /// </summary>
+        public int MaxProofingTransactions { get; set; }
+        /// <summary>
+        /// The number of proofing transactions in the current month.
+        /// </summary>
+        public int ProofingTransactions { get; set; }
     }
 }

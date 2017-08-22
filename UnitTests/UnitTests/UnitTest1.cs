@@ -27,6 +27,60 @@ namespace TXTextControl.ReportingCloud.Tests
         }
 
         [TestMethod()]
+        public void ProofingCheckTest()
+        {
+            try
+            {
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+
+                List<IncorrectWord> incorrectWords = rc.CheckText("Thiss is a sample text", rc.GetAvailableDictionaries()[0]);
+
+                // check, if images are created
+                Assert.IsFalse(incorrectWords.Count == 0);
+            }
+            catch (Exception exc)
+            {
+                Assert.Fail(exc.Message);
+            }
+        }
+
+        [TestMethod()]
+        public void AvailableDictionariesTest()
+        {
+            try
+            {
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+
+                string[] saDictionaries = rc.GetAvailableDictionaries();
+
+                // check, if images are created
+                Assert.IsFalse(saDictionaries.Length == 0);
+            }
+            catch (Exception exc)
+            {
+                Assert.Fail(exc.Message);
+            }
+        }
+
+        [TestMethod()]
+        public void GetSuggestionsTest()
+        {
+            try
+            {
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+
+                string[] saSuggestions = rc.GetSuggestions("dooper", rc.GetAvailableDictionaries()[0], 10);
+
+                // check, if images are created
+                Assert.IsFalse(saSuggestions.Length == 0);
+            }
+            catch (Exception exc)
+            {
+                Assert.Fail(exc.Message);
+            }
+        }
+
+        [TestMethod()]
         public void GetTemplateInfoTest()
         {
             try

@@ -332,27 +332,122 @@ namespace TXTextControl.ReportingCloud
         }
     }
 
-        /*-------------------------------------------------------------------------------------------------------
-        // ** GetTemplateInfo **
-        // This method implements the "v1/templates/info" Web API call
-        //
-        // Return value: TemplateInfo object
-        *-----------------------------------------------------------------------------------------------------*/
-        /// <summary>
-        /// This method returns template information.
-        /// </summary>
-        public TemplateInfo GetTemplateInfo(string templateName)
+    /*-------------------------------------------------------------------------------------------------------
+    // ** GetTemplateInfo **
+    // This method implements the "v1/templates/info" Web API call
+    //
+    // Return value: TemplateInfo object
+    *-----------------------------------------------------------------------------------------------------*/
+    /// <summary>
+    /// This method returns template information.
+    /// </summary>
+    public TemplateInfo GetTemplateInfo(string templateName)
+    {
+    // create a new HttpClient using the Factory method CreateHttpClient
+    using (HttpClient client = CreateHttpClient())
+    {
+        // set the endpoint
+        // no query parameters
+        HttpResponseMessage response = client.GetAsync("v1/templates/info?templateName=" + templateName).Result;
+
+        if (response.IsSuccessStatusCode)
         {
+            return response.Content.ReadAsAsync<TemplateInfo>().Result;
+        }
+        else
+        {
+            // throw exception with the message from the endpoint
+            throw new ArgumentException(response.Content.ReadAsStringAsync().Result);
+        }
+    }
+    }
+
+    /*-------------------------------------------------------------------------------------------------------
+    // ** CheckText **
+    // This method implements the "v1/proofing/check" Web API call
+    //
+    // Return value: List<IncorrectWord>
+    *-----------------------------------------------------------------------------------------------------*/
+    /// <summary>
+    /// This method checks text for spelling errors.
+    /// </summary>
+    /// <param name="text">Specifies the text to spell check.</param>
+    /// <param name="language">The language that is used to spell check the specified text.</param>
+    public List<IncorrectWord> CheckText(string text, string language)
+    {
         // create a new HttpClient using the Factory method CreateHttpClient
         using (HttpClient client = CreateHttpClient())
         {
             // set the endpoint
             // no query parameters
-            HttpResponseMessage response = client.GetAsync("v1/templates/info?templateName=" + templateName).Result;
+            HttpResponseMessage response = client.GetAsync("v1/proofing/check?text=" + text + "&language=" + language).Result;
 
             if (response.IsSuccessStatusCode)
             {
-                return response.Content.ReadAsAsync<TemplateInfo>().Result;
+                return response.Content.ReadAsAsync<List<IncorrectWord>>().Result;
+            }
+            else
+            {
+                // throw exception with the message from the endpoint
+                throw new ArgumentException(response.Content.ReadAsStringAsync().Result);
+            }
+        }
+    }
+
+    /*-------------------------------------------------------------------------------------------------------
+    // ** GetAvailableDictionaries **
+    // This method implements the "v1/proofing/availabledictionaries" Web API call
+    //
+    // Return value: string[]
+    *-----------------------------------------------------------------------------------------------------*/
+    /// <summary>
+    /// This method returns the available dictionaries.
+    /// </summary>
+    public string[] GetAvailableDictionaries()
+    {
+    // create a new HttpClient using the Factory method CreateHttpClient
+    using (HttpClient client = CreateHttpClient())
+    {
+        // set the endpoint
+        // no query parameters
+        HttpResponseMessage response = client.GetAsync("v1/proofing/availabledictionaries").Result;
+
+        if (response.IsSuccessStatusCode)
+        {
+            return response.Content.ReadAsAsync<string[]>().Result;
+        }
+        else
+        {
+            // throw exception with the message from the endpoint
+            throw new ArgumentException(response.Content.ReadAsStringAsync().Result);
+        }
+    }
+    }
+
+    /*-------------------------------------------------------------------------------------------------------
+    // ** GetSuggestions **
+    // This method implements the "v1/proofing/suggestions" Web API call
+    //
+    // Return value: string[]
+    *-----------------------------------------------------------------------------------------------------*/
+    /// <summary>
+    /// This method returns suggestions for a misspelled word.
+    /// </summary>
+    /// <param name="word">Specifies the incorrect word that has to be determined for suggestions.</param>
+    /// <param name="language">The language that is used to create suggestions for the specified incorrect word.</param>
+    /// <param name="max">Specifies the maximum number of suggestions that has to be determined.</param>
+    public string[] GetSuggestions(string word, string language, int max)
+    {
+        // create a new HttpClient using the Factory method CreateHttpClient
+        using (HttpClient client = CreateHttpClient())
+        {
+            // set the endpoint
+            // no query parameters
+            HttpResponseMessage response = client.GetAsync("v1/proofing/suggestions?word=" + word + "&language=" + language + "&max=" + max).Result;
+
+                if (response.IsSuccessStatusCode)
+            {
+                return response.Content.ReadAsAsync<string[]>().Result;
             }
             else
             {

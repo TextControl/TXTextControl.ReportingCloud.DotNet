@@ -64,6 +64,7 @@
     <Compile Include="Enums.cs" />
     <Compile Include="FindAndReplaceBody.cs" />
     <Compile Include="MergeBody.cs" />
+    <Compile Include="IncorrectWord.cs" />
     <Compile Include="MergeSettings.cs" />
     <Compile Include="ReportingCloud.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
