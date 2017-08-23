@@ -34,6 +34,6 @@ namespace TXTextControl.ReportingCloud
         /// <summary>
         /// Gets a value indicating the language the incorrect word was spelled.
         /// </summary>
-        public System.Globalization.CultureInfo Language { get; set; }
+        public string Language { get; set; }
     }
 }

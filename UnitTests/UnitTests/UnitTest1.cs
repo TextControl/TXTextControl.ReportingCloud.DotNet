@@ -33,7 +33,7 @@ namespace TXTextControl.ReportingCloud.Tests
             {
                 ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
 
-                List<IncorrectWord> incorrectWords = rc.CheckText("Thiss is a sample text", rc.GetAvailableDictionaries()[0]);
+                List<IncorrectWord> incorrectWords = rc.CheckText("Thiss%20is%20a%20sample%20text", rc.GetAvailableDictionaries()[0]);
 
                 // check, if images are created
                 Assert.IsFalse(incorrectWords.Count == 0);
