@@ -205,6 +205,40 @@ namespace TXTextControl.ReportingCloud
     }
 
     /*-------------------------------------------------------------------------------------------------------
+    // ** ShareDocument **
+    // This method implements the "v1/document/share" Web API call
+    //
+    // Parameters:
+    //  - string TemplateName (default = null)
+    //
+    // Return value: string
+    *-----------------------------------------------------------------------------------------------------*/
+    /// <summary>
+    /// This method returns the hash value that is used to share documents using the portal.
+    /// </summary>
+    /// <param name="templateName">The name of the template in the template storage.</param>
+    public string ShareDocument(string templateName = null)
+    {
+        // create a new HttpClient using the Factory method CreateHttpClient
+        using (HttpClient client = CreateHttpClient())
+        {
+            // set the endpoint and pass the query paramaters
+            HttpResponseMessage response = client.GetAsync("v1/document/share?templateName=" + templateName).Result;
+
+            // if successful, return the document list
+            if (response.IsSuccessStatusCode)
+            {
+                return response.Content.ReadAsAsync<string>().Result;
+            }
+            else
+            {
+                // throw exception with the message from the endpoint
+                throw new ArgumentException(response.Content.ReadAsStringAsync().Result);
+            }
+        }
+    }
+
+    /*-------------------------------------------------------------------------------------------------------
     // ** MergeDocument **
     // This method implements the "v1/document/merge" Web API call
     //
