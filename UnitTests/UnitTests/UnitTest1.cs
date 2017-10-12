@@ -11,7 +11,7 @@ namespace TXTextControl.ReportingCloud.Tests
     {
         string sUsername = "";
         string sPassword = "";
-        Uri uriBasePath = new Uri("https://api.reporting.cloud/");
+        Uri uriBasePath = new Uri("https://api.reporting.cloud");
 
         [TestMethod()]
         public void ReportingCloudTest()
@@ -216,6 +216,7 @@ namespace TXTextControl.ReportingCloud.Tests
                 MergeSettings settings = new MergeSettings();
                 settings.Author = "Text Control GmbH";
                 settings.MergeHtml = true;
+                settings.Culture = new System.Globalization.CultureInfo("de-DE");
 
                 body.MergeSettings = settings;
 

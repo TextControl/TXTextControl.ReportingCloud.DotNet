@@ -63,5 +63,9 @@ namespace TXTextControl.ReportingCloud
         /// Optional. Sets the date the document is last modified.
         /// </summary>
         public string UserPassword { get; set; }
+        /// <summary>
+        /// Optional. Sets the culture for the merge process for date and currency values.
+        /// </summary>
+        public System.Globalization.CultureInfo Culture { get; set; }
     }
 }
