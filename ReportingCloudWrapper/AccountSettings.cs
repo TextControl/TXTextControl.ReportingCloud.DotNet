@@ -48,4 +48,23 @@ namespace TXTextControl.ReportingCloud
         /// </summary>
         public int ProofingTransactions { get; set; }
     }
+
+    /*-------------------------------------------------------------------------------------------------------
+    // ** APIKey **
+    // This class implements the structure of the returned API Key objects
+    *-----------------------------------------------------------------------------------------------------*/
+    /// <summary>
+    /// This class implements the structure of the returned API Key objects.
+    /// </summary>
+    public class APIKey
+    {
+        /// <summary>
+        /// The actual API Key
+        /// </summary>
+        public string Key { get; set; }
+        /// <summary>
+        /// Specified whether this API Key is active or not
+        /// </summary>
+        public bool Active { get; set; }
+    }
 }
