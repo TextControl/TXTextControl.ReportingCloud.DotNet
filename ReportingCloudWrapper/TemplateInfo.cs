@@ -23,11 +23,16 @@ namespace TXTextControl.ReportingCloud
         /// The list of the contained merge fields.
         /// </summary>
         public List<MergeField> MergeFields { get; set; }
+        /// <summary>
+        /// Dictionary with user defined document properties
+        /// </summary>
+        public Dictionary<string, string> UserDocumentProperties { get; set; }
 
         public TemplateInfo()
         {
             this.MergeBlocks = new List<MergeBlock>();
             this.MergeFields = new List<MergeField>();
+            this.UserDocumentProperties = new Dictionary<string, string>();
         }
     }
 
