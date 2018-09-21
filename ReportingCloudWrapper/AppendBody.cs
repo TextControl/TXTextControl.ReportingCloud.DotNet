@@ -16,21 +16,33 @@ namespace TXTextControl.ReportingCloud
     public class AppendBody
     {
         /// <summary>
-        /// The datasource for the merge process as a JSON array.
+        /// The documents that will be combined into one document.
         /// </summary>
         public List<AppendDocument> Documents { get; set; } = new List<AppendDocument>();
         /// <summary>
-        /// Optional. Optional merge settings to specify merge properties and document properties such as title and author.
+        /// Optional. Optional document settings to specify document properties such as title and author.
         /// </summary>
         public DocumentSettings DocumentSettings { get; set; }
     }
 
+    /// <summary>
+    /// This class provides the structure of a AppendDocument object used in the Append method.
+    /// </summary>
     public class AppendDocument
     {
+        /// <summary>
+        /// Specifies the document to be appended.
+        /// </summary>
         public byte[] Document { get; set; }
+        /// <summary>
+        /// Specified the divider between this document and the previous document.
+        /// </summary>
         public DocumentDivider DocumentDivider { get; set; }
     }
 
+    /// <summary>
+    /// This enum defines the document divider.
+    /// </summary>
     public enum DocumentDivider
     {
         None = 1,

@@ -45,6 +45,9 @@ namespace TXTextControl.ReportingCloud
         public System.Globalization.CultureInfo Culture { get; set; }
     }
 
+    /// <summary>
+    /// This class provides the structure of the ReportingCloud DocumentSettings object used in the Merge and Append methods.
+    /// </summary>
     public class DocumentSettings
     {
         public string Author { get; set; }

@@ -437,7 +437,7 @@ namespace TXTextControl.ReportingCloud
         // Return value: byte[]
         *-----------------------------------------------------------------------------------------------------*/
         /// <summary>
-        /// This method merges a template with data.
+        /// This method appends documents to a single resulting document
         /// </summary>
         /// <param name="appendBody">The AppendBody object contains the documents for the append process.</param>
         /// <param name="returnFormat">The document format of the resulting document.</param>
