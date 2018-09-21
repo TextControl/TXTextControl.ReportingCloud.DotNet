@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpTOC>
 
-  <HelpTOCNode Id="6c07f4d2-3fdb-4804-b016-6d8ff159141a" Title="TXTextControl.ReportingCloud" Url="html/7d4e86de-0392-6c94-0254-55af82e8a2ed.htm">
-    <HelpTOCNode Id="4defaa1d-d8a6-4ef7-966d-7dea1da4e5c7" Title="AccountSettings Class" Url="html/60f52afc-3832-d50a-e6dc-5358c8993bbd.htm">
+  <HelpTOCNode Id="4a9b306c-dea0-46a8-96a3-a4662817b827" Title="TXTextControl.ReportingCloud" Url="html/7d4e86de-0392-6c94-0254-55af82e8a2ed.htm">
+    <HelpTOCNode Id="bd513ced-07a3-41e8-8fec-9d77bd25bce1" Title="AccountSettings Class" Url="html/60f52afc-3832-d50a-e6dc-5358c8993bbd.htm">
       <HelpTOCNode Title="AccountSettings Constructor " Url="html/7907c391-647b-f2d2-c698-6344dec8fdd8.htm" />
-      <HelpTOCNode Id="e230aafb-75f3-47c6-919a-0bf17274dd2f" Title="AccountSettings Properties" Url="html/ef5a2b0c-30d7-f972-3efa-0341981a67d9.htm">
+      <HelpTOCNode Id="0743ddd8-a98e-4950-bfc4-b0276e066043" Title="AccountSettings Properties" Url="html/ef5a2b0c-30d7-f972-3efa-0341981a67d9.htm">
         <HelpTOCNode Title="CreatedDocuments Property " Url="html/16cb521b-92fb-b6e7-84f3-0010823e7fb1.htm" />
         <HelpTOCNode Title="MaxDocuments Property " Url="html/ca346b5a-5a55-646c-ba54-a49433ec384c.htm" />
         <HelpTOCNode Title="MaxProofingTransactions Property " Url="html/f6b182d7-a79e-ad47-7b18-99614f217825.htm" />
@@ -16,34 +16,34 @@
       </HelpTOCNode>
       <HelpTOCNode Title="AccountSettings Methods" Url="html/4478e0d9-8af8-43a8-5ab9-f45e21c75dd7.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="68682f1f-e850-4d87-995e-242719b0ff7d" Title="APIKey Class" Url="html/61f07735-0603-dd23-a2b5-c3c01ec120c9.htm">
+    <HelpTOCNode Id="9a64de0c-3098-4952-8d88-d129a326c3c9" Title="APIKey Class" Url="html/61f07735-0603-dd23-a2b5-c3c01ec120c9.htm">
       <HelpTOCNode Title="APIKey Constructor " Url="html/b8aa9958-8ff2-2722-eb7b-d321fbdc96a7.htm" />
-      <HelpTOCNode Id="80b85cba-02e7-433b-8dd1-6d3d2cecaaa5" Title="APIKey Properties" Url="html/d9c565de-c3e2-f1e6-bbdd-d82a7bfda02f.htm">
+      <HelpTOCNode Id="2133b743-17c5-434d-a7bb-af45f5d6a19d" Title="APIKey Properties" Url="html/d9c565de-c3e2-f1e6-bbdd-d82a7bfda02f.htm">
         <HelpTOCNode Title="Active Property " Url="html/4c5f8da1-e8d1-8a74-2ce0-f4d97b650ef6.htm" />
         <HelpTOCNode Title="Key Property " Url="html/536874a2-9fa2-2cb6-4b0b-bc257edfebaf.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="APIKey Methods" Url="html/81d7f808-ee09-3046-d404-08a3f898344a.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="317e8b6f-9fc9-40e8-b168-61f51d9764c7" Title="AppendBody Class" Url="html/9a17772d-95b2-33a6-b038-5fa0788ed4cf.htm">
+    <HelpTOCNode Id="b6f9d70e-6aa1-48c7-b57d-f6d91aace73c" Title="AppendBody Class" Url="html/9a17772d-95b2-33a6-b038-5fa0788ed4cf.htm">
       <HelpTOCNode Title="AppendBody Constructor " Url="html/280847f3-0c58-d09f-f9cf-3c02723763c2.htm" />
-      <HelpTOCNode Id="75d1dd15-2cfc-48db-b69a-e25a53bd3c88" Title="AppendBody Properties" Url="html/581054f7-f5fa-67e0-1a3c-e7b1bd97d03b.htm">
+      <HelpTOCNode Id="c96343d2-cef9-434e-b4e9-3d14b97c9b4d" Title="AppendBody Properties" Url="html/581054f7-f5fa-67e0-1a3c-e7b1bd97d03b.htm">
         <HelpTOCNode Title="Documents Property " Url="html/c7639ada-49c1-18e4-be12-379fbfbe809b.htm" />
         <HelpTOCNode Title="DocumentSettings Property " Url="html/d85ee54d-acc2-6eca-e170-32b1150eb19f.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="AppendBody Methods" Url="html/1054507e-71b7-01be-6130-1664ac40d6e3.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="476844a9-05d8-44f3-b27d-cd49f62e24f0" Title="AppendDocument Class" Url="html/c9d70c6c-6707-28e2-5798-1642eb80be72.htm">
+    <HelpTOCNode Id="d6cdb209-e308-4c17-954a-2386910c4ddf" Title="AppendDocument Class" Url="html/c9d70c6c-6707-28e2-5798-1642eb80be72.htm">
       <HelpTOCNode Title="AppendDocument Constructor " Url="html/f2337f06-30ac-aab6-2639-e45ee2bfdad2.htm" />
-      <HelpTOCNode Id="ddc435c0-6e9b-4b3c-bf62-219476782711" Title="AppendDocument Properties" Url="html/59b7cee6-b3dc-6577-2262-da690f7def44.htm">
+      <HelpTOCNode Id="f5c2d822-a4c8-4efb-8765-6ff3da51a7a1" Title="AppendDocument Properties" Url="html/59b7cee6-b3dc-6577-2262-da690f7def44.htm">
         <HelpTOCNode Title="Document Property " Url="html/fbd526d7-962c-9b84-b959-44b1a8eea91c.htm" />
         <HelpTOCNode Title="DocumentDivider Property " Url="html/18a5fe29-16d3-95c4-e976-4a8c584a49bc.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="AppendDocument Methods" Url="html/b683784c-9778-702a-411a-c66b98a668fe.htm" />
     </HelpTOCNode>
     <HelpTOCNode Title="DocumentDivider Enumeration" Url="html/2d2f022a-4c55-9d6f-932b-0a90fd4232c2.htm" />
-    <HelpTOCNode Id="22a89fdc-37a7-40ae-9b26-f1395a761948" Title="DocumentSettings Class" Url="html/8bcb5eae-8427-1aff-9e73-a5a7cc31672d.htm">
+    <HelpTOCNode Id="b976fdb3-ba0a-415f-a2fe-75473afdaa90" Title="DocumentSettings Class" Url="html/8bcb5eae-8427-1aff-9e73-a5a7cc31672d.htm">
       <HelpTOCNode Title="DocumentSettings Constructor " Url="html/1d5177f9-edd2-61eb-c6a1-cde5849accdc.htm" />
-      <HelpTOCNode Id="ee190130-35eb-4ea2-8e04-d373373c590e" Title="DocumentSettings Properties" Url="html/7d2a8002-18b7-dcaa-8d03-19e280ccb527.htm">
+      <HelpTOCNode Id="b10a6eaa-d249-451c-8e05-f08e5aadf3b1" Title="DocumentSettings Properties" Url="html/7d2a8002-18b7-dcaa-8d03-19e280ccb527.htm">
         <HelpTOCNode Title="Author Property " Url="html/817df179-c515-be94-feed-b96e7e3a6cc6.htm" />
         <HelpTOCNode Title="CreationDate Property " Url="html/6f46be1d-96d6-73db-3a5b-5ee229f523d8.htm" />
         <HelpTOCNode Title="CreatorApplication Property " Url="html/7121b5e4-95f7-62fe-3614-466ade4bf562.htm" />
@@ -54,9 +54,9 @@
       </HelpTOCNode>
       <HelpTOCNode Title="DocumentSettings Methods" Url="html/a44c4bcc-9345-6d29-5306-a78a153baa0b.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="aea1afd1-e7fd-4958-9dc1-721ef299e10d" Title="FindAndReplaceBody Class" Url="html/13bc8dc4-c362-e3aa-a945-5d9bb6fd5245.htm">
+    <HelpTOCNode Id="d2c5d224-268f-4998-9de0-c9e698af21b1" Title="FindAndReplaceBody Class" Url="html/13bc8dc4-c362-e3aa-a945-5d9bb6fd5245.htm">
       <HelpTOCNode Title="FindAndReplaceBody Constructor " Url="html/c69f8b85-de8b-d6d0-7778-5a32b19881d0.htm" />
-      <HelpTOCNode Id="77f17649-7dfd-4d4e-b4e3-c33df10ec447" Title="FindAndReplaceBody Properties" Url="html/8108ceab-7e61-ca1d-5812-da04a9d8541e.htm">
+      <HelpTOCNode Id="74504ed4-69b3-4947-8746-23f83b2be672" Title="FindAndReplaceBody Properties" Url="html/8108ceab-7e61-ca1d-5812-da04a9d8541e.htm">
         <HelpTOCNode Title="FindAndReplaceData Property " Url="html/3baca0a7-c437-caf9-beb0-f495489ff158.htm" />
         <HelpTOCNode Title="MergeSettings Property " Url="html/c0ee6008-fd37-d878-661c-4e517eb61106.htm" />
         <HelpTOCNode Title="Template Property " Url="html/3683dd0d-0ace-90c9-ef8e-4d4069cb4ee2.htm" />
@@ -64,9 +64,9 @@
       <HelpTOCNode Title="FindAndReplaceBody Methods" Url="html/cb89c455-1ce0-9ab5-c4fb-470f032ba34b.htm" />
     </HelpTOCNode>
     <HelpTOCNode Title="ImageFormat Enumeration" Url="html/9cf4cce4-2cb7-393c-512f-4fbaf088c0b1.htm" />
-    <HelpTOCNode Id="8d07e540-964c-463a-bc30-3ca6068cdaab" Title="IncorrectWord Class" Url="html/67e21366-cbda-65d4-c914-32d4ebfdc635.htm">
+    <HelpTOCNode Id="f54cd89a-e2a6-4e9d-916f-0ce781185900" Title="IncorrectWord Class" Url="html/67e21366-cbda-65d4-c914-32d4ebfdc635.htm">
       <HelpTOCNode Title="IncorrectWord Constructor " Url="html/c81f68e1-7af2-25d2-c37e-bf39344904b3.htm" />
-      <HelpTOCNode Id="661cd374-cef8-414a-9c65-82af03160a35" Title="IncorrectWord Properties" Url="html/b92f4fa7-a003-5c30-0a24-aed6f5f58e80.htm">
+      <HelpTOCNode Id="a069e204-28ac-42c4-9666-faaba5bfdc4b" Title="IncorrectWord Properties" Url="html/b92f4fa7-a003-5c30-0a24-aed6f5f58e80.htm">
         <HelpTOCNode Title="IsDuplicate Property " Url="html/3e13e16e-2edc-e8df-5081-6d03f721aa48.htm" />
         <HelpTOCNode Title="Language Property " Url="html/b9226bea-db61-53e4-3904-2d893e01c974.htm" />
         <HelpTOCNode Title="Length Property " Url="html/c30e1227-cae2-c44c-9f9d-4879b8d0c21c.htm" />
@@ -75,27 +75,27 @@
       </HelpTOCNode>
       <HelpTOCNode Title="IncorrectWord Methods" Url="html/d48fbcdd-040e-c260-66fa-cfee346af0be.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="3c52a586-b4b3-4420-8324-14e05d211496" Title="MergeBlock Class" Url="html/9f1338ec-117b-1610-2793-b0587941f042.htm">
+    <HelpTOCNode Id="b60f4024-a016-443d-8f09-5a02293eb07e" Title="MergeBlock Class" Url="html/9f1338ec-117b-1610-2793-b0587941f042.htm">
       <HelpTOCNode Title="MergeBlock Constructor " Url="html/46c90495-8589-aa11-9ba5-ef8033a6d9dc.htm" />
-      <HelpTOCNode Id="2922f81e-e6e3-4478-a715-ec558dd6d0b1" Title="MergeBlock Properties" Url="html/5c96bd16-e6e3-7b07-fdc1-3e4dea8ef1ad.htm">
+      <HelpTOCNode Id="ede6ee4e-449a-4a44-8f85-db95c585631b" Title="MergeBlock Properties" Url="html/5c96bd16-e6e3-7b07-fdc1-3e4dea8ef1ad.htm">
         <HelpTOCNode Title="MergeBlocks Property " Url="html/22d9b57b-0f09-d132-1566-080aa388740c.htm" />
         <HelpTOCNode Title="MergeFields Property " Url="html/08bbefe4-8fef-b0d4-533c-53870776c332.htm" />
         <HelpTOCNode Title="Name Property " Url="html/0b83bf4e-95a1-9552-36bf-017f1946441d.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="MergeBlock Methods" Url="html/68a64986-bf7a-e6ed-579b-ffd863b1e9e7.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="aa16f510-8858-441b-a45d-8869334217d6" Title="MergeBody Class" Url="html/8dac64ac-9e03-c9a5-828b-d052a40a868a.htm">
+    <HelpTOCNode Id="f49d3e3d-cef4-4386-b0a9-ed6f1de7ea18" Title="MergeBody Class" Url="html/8dac64ac-9e03-c9a5-828b-d052a40a868a.htm">
       <HelpTOCNode Title="MergeBody Constructor " Url="html/ba8c975c-6480-3124-c8f6-17ffbbc94a78.htm" />
-      <HelpTOCNode Id="9bbb8375-a88d-48cc-a6ba-995c50eb4f3c" Title="MergeBody Properties" Url="html/acb978b6-5b8a-e233-90bf-c479d403a80a.htm">
+      <HelpTOCNode Id="81fdc0e5-fc34-4cfd-9877-891c35354564" Title="MergeBody Properties" Url="html/acb978b6-5b8a-e233-90bf-c479d403a80a.htm">
         <HelpTOCNode Title="MergeData Property " Url="html/2a18e15e-8651-96a0-f3bf-cd19145306e6.htm" />
         <HelpTOCNode Title="MergeSettings Property " Url="html/4cdc6325-853f-c595-4350-0a741fdd4eee.htm" />
         <HelpTOCNode Title="Template Property " Url="html/13c5d80f-1c0f-062d-bd3a-a6de26b5a759.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="MergeBody Methods" Url="html/a668cb29-a97a-fe84-9e00-8819617f42f7.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="2b8c329b-3be7-420c-8fc2-ed0d3f0cd2ff" Title="MergeField Class" Url="html/defeb3c0-0554-6d61-5768-ddff831d4cb3.htm">
+    <HelpTOCNode Id="705f4d82-dbf2-4b47-9a13-d8f48c48a47d" Title="MergeField Class" Url="html/defeb3c0-0554-6d61-5768-ddff831d4cb3.htm">
       <HelpTOCNode Title="MergeField Constructor " Url="html/781dcd41-94c7-d258-4e23-27760fcd7c79.htm" />
-      <HelpTOCNode Id="f5c29954-61ae-4d2d-b962-3159a797cd2c" Title="MergeField Properties" Url="html/5834f447-8813-3cbb-2ddd-2572c9b64af4.htm">
+      <HelpTOCNode Id="d422062c-de92-479c-9d19-f791d62242d1" Title="MergeField Properties" Url="html/5834f447-8813-3cbb-2ddd-2572c9b64af4.htm">
         <HelpTOCNode Title="DateTimeFormat Property " Url="html/d5cefed1-4f1f-e4da-53cd-9d16b3ffb2fa.htm" />
         <HelpTOCNode Title="Name Property " Url="html/41121a8e-2704-bf81-9fae-9e23b205deef.htm" />
         <HelpTOCNode Title="NumericFormat Property " Url="html/fe8717c0-55c8-0203-d11b-5f86572f6e97.htm" />
@@ -106,9 +106,9 @@
       </HelpTOCNode>
       <HelpTOCNode Title="MergeField Methods" Url="html/b7bca864-ca3e-5589-cb91-5bf266045871.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="8f84c3c5-6a1e-4df8-ab4e-401a91dee9dd" Title="MergeSettings Class" Url="html/a787965e-f9a2-6eec-b455-7e9938cf0ea3.htm">
+    <HelpTOCNode Id="7a14ffe2-a250-4c07-b5e0-693cf8763538" Title="MergeSettings Class" Url="html/a787965e-f9a2-6eec-b455-7e9938cf0ea3.htm">
       <HelpTOCNode Title="MergeSettings Constructor " Url="html/9850cd1e-4622-2e3d-ac13-66a4b7f1f8b4.htm" />
-      <HelpTOCNode Id="4d41a4c0-5ad6-4817-9f0a-048caa5a84bf" Title="MergeSettings Properties" Url="html/bfc3aad7-bf54-0414-c981-abef9643bdb2.htm">
+      <HelpTOCNode Id="31548ac9-8655-4d48-8c2b-a74c601596c7" Title="MergeSettings Properties" Url="html/bfc3aad7-bf54-0414-c981-abef9643bdb2.htm">
         <HelpTOCNode Title="Culture Property " Url="html/92b28850-088f-948f-330b-40193266043c.htm" />
         <HelpTOCNode Title="MergeHtml Property " Url="html/f426ee5c-fe53-0bc5-5b06-cf0854d59da3.htm" />
         <HelpTOCNode Title="RemoveEmptyBlocks Property " Url="html/a5d6246f-bd74-d8ec-1f10-4a345be4a3ff.htm" />
@@ -118,20 +118,20 @@
       </HelpTOCNode>
       <HelpTOCNode Title="MergeSettings Methods" Url="html/c522a9fd-b8de-a335-bab6-050f850991d3.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="d8f690a6-fe40-461c-bcb7-7c730a54bb7a" Title="ReportingCloud Class" Url="html/3c630195-aa8f-6934-04c9-b107dd8a8aa8.htm">
-      <HelpTOCNode Id="7cfe2936-06f6-43dd-892e-3cfa5fcb2689" Title="ReportingCloud Constructor " Url="html/3faafd5b-fe1d-4f9b-dbfa-ab3eedf06e4c.htm">
+    <HelpTOCNode Id="6c3d16a8-5ca8-412f-afcf-313e12b5080b" Title="ReportingCloud Class" Url="html/3c630195-aa8f-6934-04c9-b107dd8a8aa8.htm">
+      <HelpTOCNode Id="88693c7d-80e0-4aff-98fb-48950742d10e" Title="ReportingCloud Constructor " Url="html/3faafd5b-fe1d-4f9b-dbfa-ab3eedf06e4c.htm">
         <HelpTOCNode Title="ReportingCloud Constructor (String)" Url="html/347f45aa-c6cf-b9ea-1025-d34c34b21431.htm" />
         <HelpTOCNode Title="ReportingCloud Constructor (String, String)" Url="html/664f1acc-aa26-3228-afce-54e9e83a6e78.htm" />
         <HelpTOCNode Title="ReportingCloud Constructor (String, Uri)" Url="html/c2fde29d-5b7a-a358-9a8c-3e5e3f0d9764.htm" />
         <HelpTOCNode Title="ReportingCloud Constructor (String, String, Uri)" Url="html/f32e4f8f-2971-95ef-a23f-f177f4dbf883.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="87befbb8-06ba-445b-88f2-53b7207afff6" Title="ReportingCloud Properties" Url="html/962a617a-3a1d-28b6-a07c-4224a8ace05e.htm">
+      <HelpTOCNode Id="8a1e67d7-fc75-44ab-84aa-da95a0ee69b9" Title="ReportingCloud Properties" Url="html/962a617a-3a1d-28b6-a07c-4224a8ace05e.htm">
         <HelpTOCNode Title="APIKey Property " Url="html/1948fe8a-d1a2-94b4-85a7-9e1f715b199a.htm" />
         <HelpTOCNode Title="Password Property " Url="html/90f9029b-f153-1105-d2ce-a2d01b610d7b.htm" />
         <HelpTOCNode Title="Username Property " Url="html/d56f5244-9b12-592c-ae49-2ec70c281d2f.htm" />
         <HelpTOCNode Title="WebApiBaseUrl Property " Url="html/46200641-0e15-1632-cee8-a9001e0dc4bb.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="ef482b62-3b19-452c-89a7-25025d4f55aa" Title="ReportingCloud Methods" Url="html/6d416e82-b12e-94b3-fead-784cd4870681.htm">
+      <HelpTOCNode Id="d5a2ebc4-830a-4a59-b719-c5b2da6e46c3" Title="ReportingCloud Methods" Url="html/6d416e82-b12e-94b3-fead-784cd4870681.htm">
         <HelpTOCNode Title="AppendDocument Method " Url="html/363a1a1b-48ca-6bce-621f-bbfdc3b62328.htm" />
         <HelpTOCNode Title="CheckText Method " Url="html/039db751-4975-45c5-9e73-c333f7fdb879.htm" />
         <HelpTOCNode Title="ConvertDocument Method " Url="html/e0b97234-7fb0-a037-9a94-f81351c6c013.htm" />
@@ -158,24 +158,24 @@
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="ReturnFormat Enumeration" Url="html/4e7d4d1e-6d9a-f210-8bbc-758dc4ce11fe.htm" />
-    <HelpTOCNode Id="1574be80-8004-465b-bf8a-2a7dbbe89674" Title="Template Class" Url="html/7f0a9dc0-8a38-5e73-3740-318b360ef3c2.htm">
+    <HelpTOCNode Id="066d719f-dc48-4afc-ada9-94ce01b01b06" Title="Template Class" Url="html/7f0a9dc0-8a38-5e73-3740-318b360ef3c2.htm">
       <HelpTOCNode Title="Template Constructor " Url="html/68504867-1ad1-4f79-4ce4-e3f4d41cf447.htm" />
-      <HelpTOCNode Id="b0496e1a-4970-4303-a9f5-df4f1a2e94bf" Title="Template Properties" Url="html/d3dafb8f-0a35-1b78-e4e2-e11cb4af46a7.htm">
+      <HelpTOCNode Id="0ab98d4f-20e0-4f76-92e6-60a2617933c8" Title="Template Properties" Url="html/d3dafb8f-0a35-1b78-e4e2-e11cb4af46a7.htm">
         <HelpTOCNode Title="Modified Property " Url="html/f1b0c991-b8e0-e917-947b-c723106d2cfd.htm" />
         <HelpTOCNode Title="Size Property " Url="html/70b2b773-824b-986b-be05-23e41da61e73.htm" />
         <HelpTOCNode Title="TemplateName Property " Url="html/63edc5f3-78bc-5f46-6299-5976ee3ea18a.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="Template Methods" Url="html/c8d4f919-8828-099b-517d-70d5f28cce27.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="d3baabb5-6805-4c42-95ef-96de616bc7c4" Title="TemplateInfo Class" Url="html/9d395791-498b-7ddf-5aa7-e407a425123d.htm">
+    <HelpTOCNode Id="160881a9-2673-4f44-a5e1-86c273b08531" Title="TemplateInfo Class" Url="html/9d395791-498b-7ddf-5aa7-e407a425123d.htm">
       <HelpTOCNode Title="TemplateInfo Constructor " Url="html/1189cff0-320e-8f83-6e15-75429a53bf93.htm" />
-      <HelpTOCNode Id="c68efabb-0401-4c14-a325-5409df7224cb" Title="TemplateInfo Properties" Url="html/a67f58d9-07d5-5e0d-6cd0-79b5be5bb926.htm">
+      <HelpTOCNode Id="a79ff2f6-faa0-4e96-b41c-9404f14c80c2" Title="TemplateInfo Properties" Url="html/a67f58d9-07d5-5e0d-6cd0-79b5be5bb926.htm">
         <HelpTOCNode Title="MergeBlocks Property " Url="html/4022b0bd-5be6-6b01-25bc-0bdb2b0a4e41.htm" />
         <HelpTOCNode Title="MergeFields Property " Url="html/3d2215ed-8a6d-cb02-98a7-dc5a80dc1042.htm" />
         <HelpTOCNode Title="UserDocumentProperties Property " Url="html/04323359-b424-7a7b-b319-d86b2a71cf4d.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="TemplateInfo Methods" Url="html/9f1f2fd1-e441-cf9d-949f-d3ec95e72b1f.htm" />
-      <HelpTOCNode Id="d414b51b-4769-4c50-ab4a-093665276719" Title="TemplateInfo Fields" Url="html/c42e0a68-b3ce-1742-8151-50b44ac4fb3a.htm">
+      <HelpTOCNode Id="c6c35e04-1125-4037-9cff-e014b81b1f3e" Title="TemplateInfo Fields" Url="html/c42e0a68-b3ce-1742-8151-50b44ac4fb3a.htm">
         <HelpTOCNode Title="TemplateName Field" Url="html/7d7e3f28-6386-42fd-d078-69599f9c6863.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
