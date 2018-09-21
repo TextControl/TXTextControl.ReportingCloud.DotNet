@@ -63,6 +63,7 @@
     <Compile Include="AccountSettings.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="FindAndReplaceBody.cs" />
+    <Compile Include="AppendBody.cs" />
     <Compile Include="MergeBody.cs" />
     <Compile Include="IncorrectWord.cs" />
     <Compile Include="MergeSettings.cs" />

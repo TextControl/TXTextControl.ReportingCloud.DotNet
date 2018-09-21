@@ -299,6 +299,47 @@ namespace TXTextControl.ReportingCloud.Tests
         }
 
         [TestMethod()]
+        public void AppendDocumentTest()
+        {
+            try
+            {
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+
+                // create a new MergeBody object
+                AppendBody body = new AppendBody();
+
+                body.Documents.Add(new AppendDocument()
+                {
+                    Document = File.ReadAllBytes("documents/sample_docx.docx"),
+                    DocumentDivider = DocumentDivider.None
+                });
+
+                body.Documents.Add(new AppendDocument()
+                {
+                    Document = File.ReadAllBytes("documents/invoice.tx"),
+                    DocumentDivider = DocumentDivider.NewSection
+                });
+
+                DocumentSettings settings = new DocumentSettings();
+                settings.Author = "Text Control GmbH";
+
+                body.DocumentSettings = settings;
+
+                // append the documents
+                byte[] results = rc.AppendDocument(body, ReturnFormat.HTML, true);
+
+                string bHtmlDocument = System.Text.Encoding.UTF8.GetString(results);
+
+                // check whether the created HTML contains the test string
+                Assert.IsTrue(bHtmlDocument.Contains("<title>ReportingCloud Test Mode</title>"));
+            }
+            catch (Exception exc)
+            {
+                Assert.Fail(exc.Message);
+            }
+        }
+
+        [TestMethod()]
         public void UploadTemplateTest()
         {
             try

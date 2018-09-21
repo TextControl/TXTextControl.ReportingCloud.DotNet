@@ -426,22 +426,64 @@ namespace TXTextControl.ReportingCloud
         }
     }
 
-    /*-------------------------------------------------------------------------------------------------------
-    // ** UploadTemplate **
-    // This method implements the "v1/templates/upload" Web API call
-    //
-    // Parameters:
-    //  - string TemplateName 
-    //  - string Template
-    //
-    // Return value: void
-    *-----------------------------------------------------------------------------------------------------*/
-    /// <summary>
-    /// This method uploads a template to the template storage.
-    /// </summary>
-    /// <param name="templateName">The destination name of the template in the template storage.</param>
-    /// <param name="template">The template data encoded as a Base64 string.</param>
-    public void UploadTemplate(string templateName, byte[] template)
+        /*-------------------------------------------------------------------------------------------------------
+        // ** AppendDocument **
+        // This method implements the "v1/document/append" Web API call
+        //
+        // Parameters:
+        //  - AppendBody AppendBody
+        //  - ReturnFormat ReturnFormat (default = PDF)
+        //
+        // Return value: byte[]
+        *-----------------------------------------------------------------------------------------------------*/
+        /// <summary>
+        /// This method merges a template with data.
+        /// </summary>
+        /// <param name="appendBody">The AppendBody object contains the documents for the append process.</param>
+        /// <param name="returnFormat">The document format of the resulting document.</param>
+        /// <param name="test">Specifies whether it is a test run or not. A test run is not counted against the quota and created documents contain a watermark.</param>
+        public byte[] AppendDocument(AppendBody appendBody,
+        ReturnFormat returnFormat = ReturnFormat.PDF,
+        bool test = false)
+        {
+            // create a new HttpClient using the Factory method CreateHttpClient
+            using (HttpClient client = CreateHttpClient())
+            {
+                // set the endpoint and pass the query paramaters
+                // MergeBody is posted as a JSON object
+                HttpResponseMessage response = client.PostAsync("v1/document/append?returnFormat=" + returnFormat.ToString() +
+                    "&test=" + test.ToString(), appendBody, formatter).Result;
+
+                // if sucessful, return the image list
+                if (response.IsSuccessStatusCode)
+                {
+                    string sResult = response.Content.ReadAsAsync<string>().Result;
+                    return Convert.FromBase64String(sResult);
+                }
+                else
+                {
+                    // throw exception with the message from the endpoint
+                    throw new ArgumentException(response.Content.ReadAsStringAsync().Result);
+                }
+            }
+        }
+
+        /*-------------------------------------------------------------------------------------------------------
+        // ** UploadTemplate **
+        // This method implements the "v1/templates/upload" Web API call
+        //
+        // Parameters:
+        //  - string TemplateName 
+        //  - string Template
+        //
+        // Return value: void
+        *-----------------------------------------------------------------------------------------------------*/
+        /// <summary>
+        /// This method uploads a template to the template storage.
+        /// </summary>
+        /// <param name="templateName">The destination name of the template in the template storage.</param>
+        /// <param name="template">The template data encoded as a Base64 string.</param>
+        public void UploadTemplate(string templateName, byte[] template)
     {
         // create a new HttpClient using the Factory method CreateHttpClient
         using (HttpClient client = CreateHttpClient())
