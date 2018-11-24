@@ -26,6 +26,10 @@ This getting started tutorial helps to create your first application using the R
 
 The ReportingCloud .NET wrapper ships with a number of .NET unit tests. The scripts in each of these directories require a username and password for ReportingCloud in order to be executed. So that your username and password are not made inadvertently publicly available via a public GIT repository, you will first need to specify them.
 
+## Running unit tests under .NET Core
+
+There is a seperate test project for the Reporting Cloud .NET Core wrapper. The project can be found in the UnitTests.DotNetCore folder. As the test project is a .NET Core project, you can run it on any platform that is supported by .NET Core like macOS oder Linux using the `dotnet test` command. This assumes that you have .NET Core installed on your system. 
+
 ## Installation
 
 You will find the Text Control ReportingCloud .NET Wrapper as a NuGet package available on NuGet:
