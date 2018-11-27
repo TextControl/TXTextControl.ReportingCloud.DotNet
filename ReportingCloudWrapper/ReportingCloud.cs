@@ -11,7 +11,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
+#if NET45
 using System.Net.Http.Formatting;
+#endif
 using System.Net.Http.Headers;
 
 /// <summary>
@@ -139,26 +141,27 @@ namespace TXTextControl.ReportingCloud
         set { m_sWebApiBaseUrl = value; }
     }
 
-    /*-------------------------------------------------------------------------------------------------------
-    // ** GetTemplateThumbnails **
-    // This method implements the "v1/templates/thumbnails" Web API call
-    //
-    // Parameters:
-    //  - string Filename
-    //  - int ZoomFactor
-    //  - int FromPage
-    //  - int ToPage
-    //
-    // Return value: A List of System.Drawing.Image
-    *-----------------------------------------------------------------------------------------------------*/
-    /// <summary>
-    /// This method returns a list of thumbnails of a specific template in the template storage.
-    /// </summary>
-    /// <param name="templateName">The name of the template that should be used to create the thumbnails.</param>
-    /// <param name="zoomFactor">The desired zoom factor of the thumbnails.</param>
-    /// <param name="fromPage">The first page of the template that should be created as thumbnails.</param>
-    /// <param name="toPage">The last page of the template that should be created as thumbnails.</param>
-    /// <param name="imageFormat">The image format of the returned thumbnail images.</param>
+        /*-------------------------------------------------------------------------------------------------------
+        // ** GetTemplateThumbnails **
+        // This method implements the "v1/templates/thumbnails" Web API call
+        //
+        // Parameters:
+        //  - string Filename
+        //  - int ZoomFactor
+        //  - int FromPage
+        //  - int ToPage
+        //
+        // Return value: A List of System.Drawing.Image
+        *-----------------------------------------------------------------------------------------------------*/
+        /// <summary>
+        /// This method returns a list of thumbnails of a specific template in the template storage.
+        /// </summary>
+        /// <param name="templateName">The name of the template that should be used to create the thumbnails.</param>
+        /// <param name="zoomFactor">The desired zoom factor of the thumbnails.</param>
+        /// <param name="fromPage">The first page of the template that should be created as thumbnails.</param>
+        /// <param name="toPage">The last page of the template that should be created as thumbnails.</param>
+        /// <param name="imageFormat">The image format of the returned thumbnail images.</param>
+#if NET45
     public List<System.Drawing.Image> GetTemplateThumbnails(string templateName, int zoomFactor,
     int fromPage = 1, int toPage = 0, ImageFormat imageFormat = ImageFormat.PNG)
     {
@@ -199,26 +202,54 @@ namespace TXTextControl.ReportingCloud
             }
         }
     }
+#else
+        public List<string> GetTemplateThumbnails(string templateName, int zoomFactor,
+            int fromPage = 1, int toPage = 0, ImageFormat imageFormat = ImageFormat.PNG)
+        {
+            // create a new HttpClient using the Factory method CreateHttpClient
+            using (HttpClient client = CreateHttpClient())
+            {
+                // set the endpoint and pass the query paramaters
+                HttpResponseMessage response =
+                    client.GetAsync("v1/templates/thumbnails?templateName=" + templateName +
+                                    "&zoomFactor=" + zoomFactor +
+                                    "&fromPage=" + fromPage.ToString() +
+                                    "&toPage=" + toPage.ToString() +
+                                    "&imageFormat=" + imageFormat.ToString()).Result;
 
-    /*-------------------------------------------------------------------------------------------------------
-    // ** FindAndReplaceDocument **
-    // This method implements the "v1/document/findandreplace" Web API call
-    //
-    // Parameters:
-    //  - FindAndReplaceBody FindAndReplaceBody
-    //  - string TemplateName (default = null)
-    //  - ReturnFormat ReturnFormat (default = PDF)
-    //
-    // Return value: A List of byte[]
-    *-----------------------------------------------------------------------------------------------------*/
-    /// <summary>
-    /// This method replaces strings in a document.
-    /// </summary>
-    /// <param name="findAndReplaceBody">The FindAndReplaceBody object contains the replace data, optionally a template and merge settings.</param>
-    /// <param name="templateName">The name of the template in the template storage.</param>
-    /// <param name="returnFormat">The document format of the resulting document.</param>
-    /// <param name="test">Specifies whether it is a test run or not. A test run is not counted against the quota and created documents contain a watermark.</param>
-    public byte[] FindAndReplaceDocument(FindAndReplaceBody findAndReplaceBody,
+                // if sucessful, return the image list
+                if (response.IsSuccessStatusCode)
+                {
+                    return response.Content.ReadAsAsync<List<string>>().Result;
+                }
+                else
+                {
+                    // throw exception with the message from the endpoint
+                    throw new ArgumentException(response.Content.ReadAsStringAsync().Result);
+                }
+            }
+        }
+#endif
+
+        /*-------------------------------------------------------------------------------------------------------
+        // ** FindAndReplaceDocument **
+        // This method implements the "v1/document/findandreplace" Web API call
+        //
+        // Parameters:
+        //  - FindAndReplaceBody FindAndReplaceBody
+        //  - string TemplateName (default = null)
+        //  - ReturnFormat ReturnFormat (default = PDF)
+        //
+        // Return value: A List of byte[]
+        *-----------------------------------------------------------------------------------------------------*/
+        /// <summary>
+        /// This method replaces strings in a document.
+        /// </summary>
+        /// <param name="findAndReplaceBody">The FindAndReplaceBody object contains the replace data, optionally a template and merge settings.</param>
+        /// <param name="templateName">The name of the template in the template storage.</param>
+        /// <param name="returnFormat">The document format of the resulting document.</param>
+        /// <param name="test">Specifies whether it is a test run or not. A test run is not counted against the quota and created documents contain a watermark.</param>
+        public byte[] FindAndReplaceDocument(FindAndReplaceBody findAndReplaceBody,
     string templateName = null,
     ReturnFormat returnFormat = ReturnFormat.PDF,
     bool test = false)
