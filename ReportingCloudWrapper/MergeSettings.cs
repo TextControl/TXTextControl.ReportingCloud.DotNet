@@ -38,11 +38,15 @@ namespace TXTextControl.ReportingCloud
         /// <summary>
         /// Optional. Sets the document's author.
         /// </summary>
-  
+
         /// <summary>
         /// Optional. Sets the culture for the merge process for date and currency values.
         /// </summary>
+#if NET45
         public System.Globalization.CultureInfo Culture { get; set; }
+#else
+        public string Culture { get; set; }
+#endif
     }
 
     /// <summary>
