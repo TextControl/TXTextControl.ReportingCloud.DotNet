@@ -42,7 +42,11 @@ namespace TXTextControl.ReportingCloud
         /// <summary>
         /// Hypertext Markup Language
         /// </summary>
-        HTML
+        HTML,
+        /// <summary>
+        /// Plain Text
+        /// </summary>
+        TXT
     }
 
     /*-------------------------------------------------------------------------------------------------------

@@ -373,7 +373,7 @@ namespace TXTextControl.ReportingCloud.Tests
                 byte[] bDocument = File.ReadAllBytes("documents/invoice.tx");
 
                 byte[] bHtml = rc.ConvertDocument(bDocument, ReturnFormat.HTML);
-
+                
                 Assert.IsTrue(System.Text.Encoding.UTF8.GetString(bHtml).Contains("INVOICE"));
             }
             catch (Exception exc)
