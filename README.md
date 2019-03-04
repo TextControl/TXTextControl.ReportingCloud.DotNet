@@ -20,7 +20,7 @@ The complete API documentation can be found in the GitHub page of this project:
 
 This getting started tutorial helps to create your first application using the ReportingCloud .NET SDK:
 
-[.NET Framework Quickstart Tutorial](https://docs.reporting.cloud/docs/chapter/introduction/quickstart-dotnet)
+[.NET Framework Quickstart Tutorial](https://docs.reporting.cloud/docs/chapter/quickstart/dotnet)
 
 ## Username and password for unittests
 
