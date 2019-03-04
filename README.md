@@ -14,11 +14,11 @@ Before using ReportingCloud, please sign up to the service:
 
 The complete API documentation can be found in the GitHub page of this project:
 
-[ReportingCloud .NET Wrapper API Documentation](http://textcontrol.github.io/TXTextControl.ReportingCloud.DotNet/api.html)
+[ReportingCloud .NET SDK API Documentation](http://textcontrol.github.io/TXTextControl.ReportingCloud.DotNet/api.html)
 
 ## Getting Started
 
-This getting started tutorial helps to create your first application using the ReportingCloud .NET wrapper:
+This getting started tutorial helps to create your first application using the ReportingCloud .NET SDK:
 
 [.NET Framework Quickstart Tutorial](https://docs.reporting.cloud/docs/chapter/introduction/quickstart-dotnet)
 
