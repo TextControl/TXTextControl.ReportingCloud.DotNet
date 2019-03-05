@@ -9,8 +9,8 @@ namespace TXTextControl.ReportingCloud.Tests
     [TestClass()]
     public class ReportingCloudUnitTest
     {
-        string sUsername = "";
-        string sPassword = "";
+        string sUsername = "bjoern@textcontrol.com";
+        string sPassword = "Visions#55";
         Uri uriBasePath = new Uri("https://api.reporting.cloud/");
 
         [TestMethod()]
@@ -208,6 +208,28 @@ namespace TXTextControl.ReportingCloud.Tests
 
                 // delete temp file
                 rc.DeleteTemplate(sTempFilename);
+            }
+            catch (Exception exc)
+            {
+                Assert.Fail(exc.Message);
+            }
+        }
+
+        [TestMethod()]
+        public void GetDocumentThumbnailsTest()
+        {
+            try
+            {
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+
+                // upload 1 more document with unique file name
+                byte[] bDocument = File.ReadAllBytes("documents/invoice.tx");
+
+                // create thumbnails
+                List<System.Drawing.Image> images = rc.GetDocumentThumbnails(bDocument, 20, 1, 1, ImageFormat.PNG);
+
+                // check, if images are created
+                Assert.IsFalse((images.Count == 0));
             }
             catch (Exception exc)
             {

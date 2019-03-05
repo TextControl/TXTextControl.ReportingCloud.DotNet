@@ -1,5 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.3|AnyCPU'">
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.3|x64'" Label="Configuration">
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
   <PropertyGroup>
     <TargetFrameworks>netstandard1.3;net45;netcoreapp1.1</TargetFrameworks>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -19,9 +27,16 @@
     <AssemblyVersion>1.0.105.100</AssemblyVersion>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <RootNamespace>ReportingCloud</RootNamespace>
+    <ApplicationIcon />
+    <OutputTypeEx>library</OutputTypeEx>
+    <StartupObject />
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\$(TargetFramework)\ReportingCloudCoreWrapper.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <DocumentationFile>bin\Release\$(TargetFramework)\ReportingCloudCoreWrapper.xml</DocumentationFile>
   </PropertyGroup>
 

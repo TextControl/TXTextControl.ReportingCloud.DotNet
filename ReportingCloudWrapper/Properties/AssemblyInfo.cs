@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("TX Text Control ReportingCloud Wrapper")]
-[assembly: AssemblyDescription("The .NET wrapper for the Web API Reporting Cloud")]
+[assembly: AssemblyDescription("The .NET SDK for the Web API ReportingCloud")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Text Control GmbH")]
 [assembly: AssemblyProduct("ReportingCloud")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
