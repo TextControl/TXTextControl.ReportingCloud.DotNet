@@ -9,8 +9,8 @@ namespace UnitTestsCoreWrapper
     [TestClass]
     public class UnitTest1
     {
-        string sUsername = "bjoern@textcontrol.com";
-        string sPassword = "Visions#55";
+        string sUsername = "";
+        string sPassword = "";
         Uri uriBasePath = new Uri("https://api.reporting.cloud/");
 
         [TestMethod()]
