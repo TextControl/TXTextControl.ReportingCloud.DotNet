@@ -36,9 +36,9 @@ namespace TXTextControl.ReportingCloud
         /// </summary>
         public bool? RemoveTrailingWhitespace { get; set; }
         /// <summary>
-        /// Optional. Sets the document's author.
+        /// Optional. Specifies whether lines should be removed that contain only empty fields and no other content. The default value is false.
         /// </summary>
-
+        public bool? RemoveEmptyLines { get; set; }
         /// <summary>
         /// Optional. Sets the culture for the merge process for date and currency values.
         /// </summary>
@@ -54,6 +54,9 @@ namespace TXTextControl.ReportingCloud
     /// </summary>
     public class DocumentSettings
     {
+        /// <summary>
+        /// Optional. Sets the document's author which will be saved in the document.
+        /// </summary>
         public string Author { get; set; }
         /// <summary>
         /// Optional. Sets the document's creation date which will be saved in the document.

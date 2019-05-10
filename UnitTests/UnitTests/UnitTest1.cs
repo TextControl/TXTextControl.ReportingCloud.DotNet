@@ -303,16 +303,23 @@ namespace TXTextControl.ReportingCloud.Tests
 
                 body.MergeSettings = settings;
 
-                // merge the document
-                List<byte[]> results = rc.MergeDocument(body, sTempFilename, ReturnFormat.HTML);
+                if (rc.TemplateExists(sTempFilename))
+                {
+                    // merge the document
+                    List<byte[]> results = rc.MergeDocument(body, sTempFilename, ReturnFormat.HTML);
 
-                string bHtmlDocument = System.Text.Encoding.UTF8.GetString(results[0]);
-                
-                // check whether the created HTML contains the test string
-                Assert.IsTrue(bHtmlDocument.Contains("Test_R667663"));
+                    string bHtmlDocument = System.Text.Encoding.UTF8.GetString(results[0]);
 
-                // delete the template
-                rc.DeleteTemplate(sTempFilename);
+                    // check whether the created HTML contains the test string
+                    Assert.IsTrue(bHtmlDocument.Contains("Test_R667663"));
+
+                    // delete the template
+                    rc.DeleteTemplate(sTempFilename);
+                }
+                else
+                {
+                    Assert.Fail("Template is not uploaded.");
+                }
             }
             catch (Exception exc)
             {
