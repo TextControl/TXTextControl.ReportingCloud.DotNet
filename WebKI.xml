@@ -15,7 +15,9 @@
   <HelpKINode Title="AccountSettings.SerialNumber property" Url="html/31c42eba-a449-c473-d24b-fb40f97be3c1.htm" />
   <HelpKINode Title="AccountSettings.UploadedTemplates property" Url="html/ab6ec440-9cc0-8569-a46a-428be884d57b.htm" />
   <HelpKINode Title="AccountSettings.ValidUntil property" Url="html/f9378586-eb33-cc40-9d69-7be9a40160d8.htm" />
+  <HelpKINode Title="Activated enumeration member" Url="html/a2adc6de-b171-b330-544c-8738270f1b56.htm" />
   <HelpKINode Title="Active property" Url="html/4c5f8da1-e8d1-8a74-2ce0-f4d97b650ef6.htm" />
+  <HelpKINode Title="Always enumeration member" Url="html/a2adc6de-b171-b330-544c-8738270f1b56.htm" />
   <HelpKINode Title="APIKey class">
     <HelpKINode Title="APIKey Class" Url="html/61f07735-0603-dd23-a2b5-c3c01ec120c9.htm" />
     <HelpKINode Title="constructor" Url="html/b8aa9958-8ff2-2722-eb7b-d321fbdc96a7.htm" />
@@ -47,6 +49,9 @@
   <HelpKINode Title="AppendDocument.DocumentDivider property" Url="html/18a5fe29-16d3-95c4-e976-4a8c584a49bc.htm" />
   <HelpKINode Title="Author property" Url="html/817df179-c515-be94-feed-b96e7e3a6cc6.htm" />
   <HelpKINode Title="BMP enumeration member" Url="html/9cf4cce4-2cb7-393c-512f-4fbaf088c0b1.htm" />
+  <HelpKINode Title="ChangeKind enumeration" Url="html/1b004117-ed98-8154-520d-df4ee3251ed3.htm" />
+  <HelpKINode Title="ChangeKind property" Url="html/1efc7f05-bfdf-0168-e8e3-72fb2f443dc2.htm" />
+  <HelpKINode Title="ChangeTime property" Url="html/69ebf7f7-b6f7-c3f2-fb78-d4e7b48d141d.htm" />
   <HelpKINode Title="CheckText method" Url="html/039db751-4975-45c5-9e73-c333f7fdb879.htm" />
   <HelpKINode Title="ConvertDocument method" Url="html/e0b97234-7fb0-a037-9a94-f81351c6c013.htm" />
   <HelpKINode Title="CreateAccountAPIKey method" Url="html/38a69897-9a74-5f47-124f-c7dade28a934.htm" />
@@ -55,10 +60,15 @@
   <HelpKINode Title="CreatorApplication property" Url="html/7121b5e4-95f7-62fe-3614-466ade4bf562.htm" />
   <HelpKINode Title="Culture property" Url="html/92b28850-088f-948f-330b-40193266043c.htm" />
   <HelpKINode Title="DateTimeFormat property" Url="html/d5cefed1-4f1f-e4da-53cd-9d16b3ffb2fa.htm" />
+  <HelpKINode Title="DefaultHighlightColor property" Url="html/f00426d1-1396-ef5d-fa60-8aa333581cb5.htm" />
   <HelpKINode Title="DeleteAccountAPIKey method" Url="html/9d769481-3bd5-0871-f653-f6305f96bdea.htm" />
+  <HelpKINode Title="DeletedText enumeration member" Url="html/1b004117-ed98-8154-520d-df4ee3251ed3.htm" />
   <HelpKINode Title="DeleteTemplate method" Url="html/b1bd910a-b9df-5e08-2f69-d8282ede8074.htm" />
   <HelpKINode Title="DOC enumeration member" Url="html/4e7d4d1e-6d9a-f210-8bbc-758dc4ce11fe.htm" />
-  <HelpKINode Title="Document property" Url="html/fbd526d7-962c-9b84-b959-44b1a8eea91c.htm" />
+  <HelpKINode Title="Document property">
+    <HelpKINode Title="AppendDocument.Document Property " Url="html/fbd526d7-962c-9b84-b959-44b1a8eea91c.htm" />
+    <HelpKINode Title="TrackedChangeModifiedDocument.Document Property " Url="html/5def3aac-5db5-63b5-bce2-179e8139cac5.htm" />
+  </HelpKINode>
   <HelpKINode Title="DocumentDivider enumeration" Url="html/2d2f022a-4c55-9d6f-932b-0a90fd4232c2.htm" />
   <HelpKINode Title="DocumentDivider property" Url="html/18a5fe29-16d3-95c4-e976-4a8c584a49bc.htm" />
   <HelpKINode Title="Documents property" Url="html/c7639ada-49c1-18e4-be12-379fbfbe809b.htm" />
@@ -81,7 +91,7 @@
   <HelpKINode Title="DocumentTitle property" Url="html/83f3d7f3-bab1-8d35-614d-0ff4097a6d8c.htm" />
   <HelpKINode Title="DOCX enumeration member" Url="html/4e7d4d1e-6d9a-f210-8bbc-758dc4ce11fe.htm" />
   <HelpKINode Title="DownloadTemplate method" Url="html/65f36ade-5da0-5f38-0806-b0aa9f342c5b.htm" />
-  <HelpKINode Title="EncodeTo64 method" Url="html/2d3abfa5-f624-5872-e68a-87a55f18d129.htm" />
+  <HelpKINode Title="EncodeTo64 method" Url="html/da0bec69-2fc7-6c9e-d42f-150caaaa729c.htm" />
   <HelpKINode Title="FindAndReplaceBody class">
     <HelpKINode Title="FindAndReplaceBody Class" Url="html/13bc8dc4-c362-e3aa-a945-5d9bb6fd5245.htm" />
     <HelpKINode Title="constructor" Url="html/c69f8b85-de8b-d6d0-7778-5a32b19881d0.htm" />
@@ -97,13 +107,24 @@
   <HelpKINode Title="GetAccountAPIKeys method" Url="html/3bd598f6-c293-cbea-a445-851b675ecb67.htm" />
   <HelpKINode Title="GetAccountSettings method" Url="html/4a1f9176-7ee1-3b8f-3293-22a02645aa6f.htm" />
   <HelpKINode Title="GetAvailableDictionaries method" Url="html/3077d120-2867-f4c6-dc0c-b6a6995de7e3.htm" />
+  <HelpKINode Title="GetDocumentThumbnails method" Url="html/b19c5f49-915d-36e2-4630-4e7a8227c0ef.htm" />
   <HelpKINode Title="GetSuggestions method" Url="html/5b0fb294-da30-51d4-a28d-e93158a1cc4a.htm" />
   <HelpKINode Title="GetTemplateCount method" Url="html/0394bbef-9c76-c8b7-a662-b203eb854818.htm" />
   <HelpKINode Title="GetTemplateInfo method" Url="html/1a13fa80-f307-3936-fdc4-2138089a00f6.htm" />
   <HelpKINode Title="GetTemplatePageCount method" Url="html/1416868f-2015-75c1-193a-ea713dc4aaf9.htm" />
   <HelpKINode Title="GetTemplateThumbnails method" Url="html/a95de8fb-f5a7-06aa-a572-cfe2ebc25884.htm" />
+  <HelpKINode Title="GetTrackedChanges method" Url="html/bae4ee85-b4c4-bd9a-a61b-dfb1bdf4becd.htm" />
   <HelpKINode Title="GIF enumeration member" Url="html/9cf4cce4-2cb7-393c-512f-4fbaf088c0b1.htm" />
+  <HelpKINode Title="Helpers class">
+    <HelpKINode Title="Helpers Class" Url="html/79ca7c0f-e3a4-4b9a-346e-d569b423772e.htm" />
+    <HelpKINode Title="methods" Url="html/b8f44762-3edf-8d34-b3f8-a82138dcd406.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Helpers.EncodeTo64 method" Url="html/da0bec69-2fc7-6c9e-d42f-150caaaa729c.htm" />
+  <HelpKINode Title="HighlightColor property" Url="html/c8ce838b-f1d9-3313-1751-f3ab9998035c.htm" />
+  <HelpKINode Title="HighlightMode enumeration" Url="html/a2adc6de-b171-b330-544c-8738270f1b56.htm" />
+  <HelpKINode Title="HighlightMode property" Url="html/5b7cb375-a1ad-1fb5-0cc5-901c2a98b70f.htm" />
   <HelpKINode Title="HTML enumeration member" Url="html/4e7d4d1e-6d9a-f210-8bbc-758dc4ce11fe.htm" />
+  <HelpKINode Title="Id property" Url="html/caa863cb-ede2-62d8-5c88-ef69c30ea32d.htm" />
   <HelpKINode Title="ImageFormat enumeration" Url="html/9cf4cce4-2cb7-393c-512f-4fbaf088c0b1.htm" />
   <HelpKINode Title="IncorrectWord class">
     <HelpKINode Title="IncorrectWord Class" Url="html/67e21366-cbda-65d4-c914-32d4ebfdc635.htm" />
@@ -117,12 +138,16 @@
   <HelpKINode Title="IncorrectWord.Length property" Url="html/c30e1227-cae2-c44c-9f9d-4879b8d0c21c.htm" />
   <HelpKINode Title="IncorrectWord.Start property" Url="html/8e077d5b-ebcf-fb58-a8e6-6bd7e01b545a.htm" />
   <HelpKINode Title="IncorrectWord.Text property" Url="html/3b37b1c9-3ad2-86af-e6e0-7243974fdb16.htm" />
+  <HelpKINode Title="InsertedText enumeration member" Url="html/1b004117-ed98-8154-520d-df4ee3251ed3.htm" />
   <HelpKINode Title="IsDuplicate property" Url="html/3e13e16e-2edc-e8df-5081-6d03f721aa48.htm" />
   <HelpKINode Title="JPG enumeration member" Url="html/9cf4cce4-2cb7-393c-512f-4fbaf088c0b1.htm" />
   <HelpKINode Title="Key property" Url="html/536874a2-9fa2-2cb6-4b0b-bc257edfebaf.htm" />
   <HelpKINode Title="Language property" Url="html/b9226bea-db61-53e4-3904-2d893e01c974.htm" />
   <HelpKINode Title="LastModificationDate property" Url="html/1cadcfd1-277e-7791-09a8-a466f33e4c0d.htm" />
-  <HelpKINode Title="Length property" Url="html/c30e1227-cae2-c44c-9f9d-4879b8d0c21c.htm" />
+  <HelpKINode Title="Length property">
+    <HelpKINode Title="IncorrectWord.Length Property " Url="html/c30e1227-cae2-c44c-9f9d-4879b8d0c21c.htm" />
+    <HelpKINode Title="TrackedChange.Length Property " Url="html/2fbf1c84-921c-1688-6c5f-45028745a70c.htm" />
+  </HelpKINode>
   <HelpKINode Title="ListFonts method" Url="html/d5d5065b-a8fe-0e2f-9dc9-5d5898a36cf9.htm" />
   <HelpKINode Title="ListTemplates method" Url="html/85c041b3-c0d3-d256-1352-28ad3954f02e.htm" />
   <HelpKINode Title="MaxDocuments property" Url="html/ca346b5a-5a55-646c-ba54-a49433ec384c.htm" />
@@ -189,12 +214,14 @@
   <HelpKINode Title="MergeSettings.RemoveEmptyBlocks property" Url="html/a5d6246f-bd74-d8ec-1f10-4a345be4a3ff.htm" />
   <HelpKINode Title="MergeSettings.RemoveEmptyFields property" Url="html/d921ad29-c6df-412a-54fc-3b7b1ac853ce.htm" />
   <HelpKINode Title="MergeSettings.RemoveEmptyImages property" Url="html/4bc0d01f-e674-2df2-cc07-10d627390af7.htm" />
+  <HelpKINode Title="MergeSettings.RemoveEmptyLines property" Url="html/db634c04-5233-da7c-d1c1-9bead8927ba2.htm" />
   <HelpKINode Title="MergeSettings.RemoveTrailingWhitespace property" Url="html/02077ab7-c9fb-a52d-3776-ea1937f6e036.htm" />
   <HelpKINode Title="Modified property" Url="html/f1b0c991-b8e0-e917-947b-c723106d2cfd.htm" />
   <HelpKINode Title="Name property">
     <HelpKINode Title="MergeBlock.Name Property " Url="html/0b83bf4e-95a1-9552-36bf-017f1946441d.htm" />
     <HelpKINode Title="MergeField.Name Property " Url="html/41121a8e-2704-bf81-9fae-9e23b205deef.htm" />
   </HelpKINode>
+  <HelpKINode Title="Never enumeration member" Url="html/a2adc6de-b171-b330-544c-8738270f1b56.htm" />
   <HelpKINode Title="NewParagraph enumeration member" Url="html/2d2f022a-4c55-9d6f-932b-0a90fd4232c2.htm" />
   <HelpKINode Title="NewSection enumeration member" Url="html/2d2f022a-4c55-9d6f-932b-0a90fd4232c2.htm" />
   <HelpKINode Title="None enumeration member" Url="html/2d2f022a-4c55-9d6f-932b-0a90fd4232c2.htm" />
@@ -204,10 +231,22 @@
   <HelpKINode Title="PDFA enumeration member" Url="html/4e7d4d1e-6d9a-f210-8bbc-758dc4ce11fe.htm" />
   <HelpKINode Title="PNG enumeration member" Url="html/9cf4cce4-2cb7-393c-512f-4fbaf088c0b1.htm" />
   <HelpKINode Title="PreserveFormatting property" Url="html/9139f9f0-6b57-7fb4-272a-8fbe731ead6e.htm" />
+  <HelpKINode Title="Processing class">
+    <HelpKINode Title="Processing Class" Url="html/e80d96a2-2bea-d25e-06fe-576fdb15bac4.htm" />
+    <HelpKINode Title="constructor" Url="html/c9eee8cb-c65e-81eb-f9ed-60dafc4698ab.htm" />
+    <HelpKINode Title="methods" Url="html/10561ffc-c20d-7f09-21a5-3bcf522e98b4.htm" />
+    <HelpKINode Title="properties" Url="html/9b6fb5e7-3f5a-c6db-34ca-fad60a8707ff.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Processing property" Url="html/e968f76c-d75a-2122-9b9d-b9720bf89460.htm" />
+  <HelpKINode Title="Processing.Processing constructor" Url="html/c9eee8cb-c65e-81eb-f9ed-60dafc4698ab.htm" />
+  <HelpKINode Title="Processing.Review property" Url="html/b15de60f-0172-528a-a2a4-ea58d51990b7.htm" />
   <HelpKINode Title="ProofingTransactions property" Url="html/53860f0b-c350-859e-9202-f811054c859b.htm" />
+  <HelpKINode Title="Removed property" Url="html/27726108-b053-fcdb-d47c-c6f1b42db152.htm" />
   <HelpKINode Title="RemoveEmptyBlocks property" Url="html/a5d6246f-bd74-d8ec-1f10-4a345be4a3ff.htm" />
   <HelpKINode Title="RemoveEmptyFields property" Url="html/d921ad29-c6df-412a-54fc-3b7b1ac853ce.htm" />
   <HelpKINode Title="RemoveEmptyImages property" Url="html/4bc0d01f-e674-2df2-cc07-10d627390af7.htm" />
+  <HelpKINode Title="RemoveEmptyLines property" Url="html/db634c04-5233-da7c-d1c1-9bead8927ba2.htm" />
+  <HelpKINode Title="RemoveTrackedChange method" Url="html/3d674fb7-b706-f28c-b252-e75916080b12.htm" />
   <HelpKINode Title="RemoveTrailingWhitespace property" Url="html/02077ab7-c9fb-a52d-3776-ea1937f6e036.htm" />
   <HelpKINode Title="ReportingCloud class">
     <HelpKINode Title="ReportingCloud Class" Url="html/3c630195-aa8f-6934-04c9-b107dd8a8aa8.htm" />
@@ -223,11 +262,11 @@
   <HelpKINode Title="ReportingCloud.DeleteAccountAPIKey method" Url="html/9d769481-3bd5-0871-f653-f6305f96bdea.htm" />
   <HelpKINode Title="ReportingCloud.DeleteTemplate method" Url="html/b1bd910a-b9df-5e08-2f69-d8282ede8074.htm" />
   <HelpKINode Title="ReportingCloud.DownloadTemplate method" Url="html/65f36ade-5da0-5f38-0806-b0aa9f342c5b.htm" />
-  <HelpKINode Title="ReportingCloud.EncodeTo64 method" Url="html/2d3abfa5-f624-5872-e68a-87a55f18d129.htm" />
   <HelpKINode Title="ReportingCloud.FindAndReplaceDocument method" Url="html/386e82c5-47bb-bb6d-6342-ccb6e9a09579.htm" />
   <HelpKINode Title="ReportingCloud.GetAccountAPIKeys method" Url="html/3bd598f6-c293-cbea-a445-851b675ecb67.htm" />
   <HelpKINode Title="ReportingCloud.GetAccountSettings method" Url="html/4a1f9176-7ee1-3b8f-3293-22a02645aa6f.htm" />
   <HelpKINode Title="ReportingCloud.GetAvailableDictionaries method" Url="html/3077d120-2867-f4c6-dc0c-b6a6995de7e3.htm" />
+  <HelpKINode Title="ReportingCloud.GetDocumentThumbnails method" Url="html/b19c5f49-915d-36e2-4630-4e7a8227c0ef.htm" />
   <HelpKINode Title="ReportingCloud.GetSuggestions method" Url="html/5b0fb294-da30-51d4-a28d-e93158a1cc4a.htm" />
   <HelpKINode Title="ReportingCloud.GetTemplateCount method" Url="html/0394bbef-9c76-c8b7-a662-b203eb854818.htm" />
   <HelpKINode Title="ReportingCloud.GetTemplateInfo method" Url="html/1a13fa80-f307-3936-fdc4-2138089a00f6.htm" />
@@ -237,6 +276,7 @@
   <HelpKINode Title="ReportingCloud.ListTemplates method" Url="html/85c041b3-c0d3-d256-1352-28ad3954f02e.htm" />
   <HelpKINode Title="ReportingCloud.MergeDocument method" Url="html/abee3876-fe1a-38b7-ee31-e6a3e08a287e.htm" />
   <HelpKINode Title="ReportingCloud.Password property" Url="html/90f9029b-f153-1105-d2ce-a2d01b610d7b.htm" />
+  <HelpKINode Title="ReportingCloud.Processing property" Url="html/e968f76c-d75a-2122-9b9d-b9720bf89460.htm" />
   <HelpKINode Title="ReportingCloud.ReportingCloud constructor" Url="html/3faafd5b-fe1d-4f9b-dbfa-ab3eedf06e4c.htm" />
   <HelpKINode Title="ReportingCloud.ShareDocument method" Url="html/893485e3-5b69-3cf3-6b1f-4beaf897ba6d.htm" />
   <HelpKINode Title="ReportingCloud.TemplateExists method" Url="html/8089e1a6-4243-ec52-6827-8baa058058a0.htm" />
@@ -244,11 +284,23 @@
   <HelpKINode Title="ReportingCloud.Username property" Url="html/d56f5244-9b12-592c-ae49-2ec70c281d2f.htm" />
   <HelpKINode Title="ReportingCloud.WebApiBaseUrl property" Url="html/46200641-0e15-1632-cee8-a9001e0dc4bb.htm" />
   <HelpKINode Title="ReturnFormat enumeration" Url="html/4e7d4d1e-6d9a-f210-8bbc-758dc4ce11fe.htm" />
+  <HelpKINode Title="Review class">
+    <HelpKINode Title="Review Class" Url="html/fb7f76f5-0084-bda8-9b96-7073a64b6ddd.htm" />
+    <HelpKINode Title="constructor" Url="html/b5cb02ba-beab-7718-1efd-0b2ddbea14e9.htm" />
+    <HelpKINode Title="methods" Url="html/ec26a407-6add-ad41-8b4a-00c1102b3461.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Review property" Url="html/b15de60f-0172-528a-a2a4-ea58d51990b7.htm" />
+  <HelpKINode Title="Review.GetTrackedChanges method" Url="html/bae4ee85-b4c4-bd9a-a61b-dfb1bdf4becd.htm" />
+  <HelpKINode Title="Review.RemoveTrackedChange method" Url="html/3d674fb7-b706-f28c-b252-e75916080b12.htm" />
+  <HelpKINode Title="Review.Review constructor" Url="html/b5cb02ba-beab-7718-1efd-0b2ddbea14e9.htm" />
   <HelpKINode Title="RTF enumeration member" Url="html/4e7d4d1e-6d9a-f210-8bbc-758dc4ce11fe.htm" />
   <HelpKINode Title="SerialNumber property" Url="html/31c42eba-a449-c473-d24b-fb40f97be3c1.htm" />
   <HelpKINode Title="ShareDocument method" Url="html/893485e3-5b69-3cf3-6b1f-4beaf897ba6d.htm" />
   <HelpKINode Title="Size property" Url="html/70b2b773-824b-986b-be05-23e41da61e73.htm" />
-  <HelpKINode Title="Start property" Url="html/8e077d5b-ebcf-fb58-a8e6-6bd7e01b545a.htm" />
+  <HelpKINode Title="Start property">
+    <HelpKINode Title="IncorrectWord.Start Property " Url="html/8e077d5b-ebcf-fb58-a8e6-6bd7e01b545a.htm" />
+    <HelpKINode Title="TrackedChange.Start Property " Url="html/48e48ec7-f79f-b310-56a0-61f6c32d6408.htm" />
+  </HelpKINode>
   <HelpKINode Title="Template class">
     <HelpKINode Title="Template Class" Url="html/7f0a9dc0-8a38-5e73-3740-318b360ef3c2.htm" />
     <HelpKINode Title="constructor" Url="html/68504867-1ad1-4f79-4ce4-e3f4d41cf447.htm" />
@@ -281,31 +333,67 @@
   <HelpKINode Title="Text property">
     <HelpKINode Title="IncorrectWord.Text Property " Url="html/3b37b1c9-3ad2-86af-e6e0-7243974fdb16.htm" />
     <HelpKINode Title="MergeField.Text Property " Url="html/5941c7d6-77e1-bfec-9866-61bfd6930985.htm" />
+    <HelpKINode Title="TrackedChange.Text Property " Url="html/6d6685af-4d3c-5456-e3e7-b5826faa82dd.htm" />
   </HelpKINode>
   <HelpKINode Title="TextAfter property" Url="html/cb70d0f0-8311-353e-38c7-43326643bf45.htm" />
   <HelpKINode Title="TextBefore property" Url="html/26c7763e-d4bb-1a67-5e45-0d24380830ef.htm" />
+  <HelpKINode Title="TrackedChange class">
+    <HelpKINode Title="TrackedChange Class" Url="html/a17e449d-845b-195d-61fd-0ad78a8a7f87.htm" />
+    <HelpKINode Title="constructor" Url="html/05a3141a-6c36-bad0-9126-c19b3fe950e5.htm" />
+    <HelpKINode Title="methods" Url="html/6e4e9c49-1d61-33b0-8cf6-f283590d3f65.htm" />
+    <HelpKINode Title="properties" Url="html/0fe13f77-dc34-78c2-849d-3faf7cb011a2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TrackedChange.ChangeKind property" Url="html/1efc7f05-bfdf-0168-e8e3-72fb2f443dc2.htm" />
+  <HelpKINode Title="TrackedChange.ChangeTime property" Url="html/69ebf7f7-b6f7-c3f2-fb78-d4e7b48d141d.htm" />
+  <HelpKINode Title="TrackedChange.DefaultHighlightColor property" Url="html/f00426d1-1396-ef5d-fa60-8aa333581cb5.htm" />
+  <HelpKINode Title="TrackedChange.HighlightColor property" Url="html/c8ce838b-f1d9-3313-1751-f3ab9998035c.htm" />
+  <HelpKINode Title="TrackedChange.HighlightMode property" Url="html/5b7cb375-a1ad-1fb5-0cc5-901c2a98b70f.htm" />
+  <HelpKINode Title="TrackedChange.Id property" Url="html/caa863cb-ede2-62d8-5c88-ef69c30ea32d.htm" />
+  <HelpKINode Title="TrackedChange.Length property" Url="html/2fbf1c84-921c-1688-6c5f-45028745a70c.htm" />
+  <HelpKINode Title="TrackedChange.Start property" Url="html/48e48ec7-f79f-b310-56a0-61f6c32d6408.htm" />
+  <HelpKINode Title="TrackedChange.Text property" Url="html/6d6685af-4d3c-5456-e3e7-b5826faa82dd.htm" />
+  <HelpKINode Title="TrackedChange.TrackedChange constructor" Url="html/05a3141a-6c36-bad0-9126-c19b3fe950e5.htm" />
+  <HelpKINode Title="TrackedChange.UserName property" Url="html/d2944ff1-0f52-49d2-52a5-665ffaf49b4c.htm" />
+  <HelpKINode Title="TrackedChangeModifiedDocument class">
+    <HelpKINode Title="TrackedChangeModifiedDocument Class" Url="html/9d7f610d-5645-6e07-d6cb-85cb54e4d1dd.htm" />
+    <HelpKINode Title="constructor" Url="html/6c1dfa9c-e55f-b7f1-c996-c224b1ac873b.htm" />
+    <HelpKINode Title="methods" Url="html/a3cab6ed-685b-60a3-def6-cd6cf507c25a.htm" />
+    <HelpKINode Title="properties" Url="html/0a3e3c09-9fdb-509a-72b6-8ff3130979d8.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TrackedChangeModifiedDocument.Document property" Url="html/5def3aac-5db5-63b5-bce2-179e8139cac5.htm" />
+  <HelpKINode Title="TrackedChangeModifiedDocument.Removed property" Url="html/27726108-b053-fcdb-d47c-c6f1b42db152.htm" />
+  <HelpKINode Title="TrackedChangeModifiedDocument.TrackedChangeModifiedDocument constructor" Url="html/6c1dfa9c-e55f-b7f1-c996-c224b1ac873b.htm" />
   <HelpKINode Title="TX enumeration member" Url="html/4e7d4d1e-6d9a-f210-8bbc-758dc4ce11fe.htm" />
+  <HelpKINode Title="TXT enumeration member" Url="html/4e7d4d1e-6d9a-f210-8bbc-758dc4ce11fe.htm" />
   <HelpKINode Title="TXTextControl.ReportingCloud namespace" Url="html/7d4e86de-0392-6c94-0254-55af82e8a2ed.htm" />
   <HelpKINode Title="TXTextControl.ReportingCloud.AccountSettings class" Url="html/60f52afc-3832-d50a-e6dc-5358c8993bbd.htm" />
   <HelpKINode Title="TXTextControl.ReportingCloud.APIKey class" Url="html/61f07735-0603-dd23-a2b5-c3c01ec120c9.htm" />
   <HelpKINode Title="TXTextControl.ReportingCloud.AppendBody class" Url="html/9a17772d-95b2-33a6-b038-5fa0788ed4cf.htm" />
   <HelpKINode Title="TXTextControl.ReportingCloud.AppendDocument class" Url="html/c9d70c6c-6707-28e2-5798-1642eb80be72.htm" />
+  <HelpKINode Title="TXTextControl.ReportingCloud.ChangeKind enumeration" Url="html/1b004117-ed98-8154-520d-df4ee3251ed3.htm" />
   <HelpKINode Title="TXTextControl.ReportingCloud.DocumentDivider enumeration" Url="html/2d2f022a-4c55-9d6f-932b-0a90fd4232c2.htm" />
   <HelpKINode Title="TXTextControl.ReportingCloud.DocumentSettings class" Url="html/8bcb5eae-8427-1aff-9e73-a5a7cc31672d.htm" />
   <HelpKINode Title="TXTextControl.ReportingCloud.FindAndReplaceBody class" Url="html/13bc8dc4-c362-e3aa-a945-5d9bb6fd5245.htm" />
+  <HelpKINode Title="TXTextControl.ReportingCloud.Helpers class" Url="html/79ca7c0f-e3a4-4b9a-346e-d569b423772e.htm" />
+  <HelpKINode Title="TXTextControl.ReportingCloud.HighlightMode enumeration" Url="html/a2adc6de-b171-b330-544c-8738270f1b56.htm" />
   <HelpKINode Title="TXTextControl.ReportingCloud.ImageFormat enumeration" Url="html/9cf4cce4-2cb7-393c-512f-4fbaf088c0b1.htm" />
   <HelpKINode Title="TXTextControl.ReportingCloud.IncorrectWord class" Url="html/67e21366-cbda-65d4-c914-32d4ebfdc635.htm" />
   <HelpKINode Title="TXTextControl.ReportingCloud.MergeBlock class" Url="html/9f1338ec-117b-1610-2793-b0587941f042.htm" />
   <HelpKINode Title="TXTextControl.ReportingCloud.MergeBody class" Url="html/8dac64ac-9e03-c9a5-828b-d052a40a868a.htm" />
   <HelpKINode Title="TXTextControl.ReportingCloud.MergeField class" Url="html/defeb3c0-0554-6d61-5768-ddff831d4cb3.htm" />
   <HelpKINode Title="TXTextControl.ReportingCloud.MergeSettings class" Url="html/a787965e-f9a2-6eec-b455-7e9938cf0ea3.htm" />
+  <HelpKINode Title="TXTextControl.ReportingCloud.Processing class" Url="html/e80d96a2-2bea-d25e-06fe-576fdb15bac4.htm" />
   <HelpKINode Title="TXTextControl.ReportingCloud.ReportingCloud class" Url="html/3c630195-aa8f-6934-04c9-b107dd8a8aa8.htm" />
   <HelpKINode Title="TXTextControl.ReportingCloud.ReturnFormat enumeration" Url="html/4e7d4d1e-6d9a-f210-8bbc-758dc4ce11fe.htm" />
+  <HelpKINode Title="TXTextControl.ReportingCloud.Review class" Url="html/fb7f76f5-0084-bda8-9b96-7073a64b6ddd.htm" />
   <HelpKINode Title="TXTextControl.ReportingCloud.Template class" Url="html/7f0a9dc0-8a38-5e73-3740-318b360ef3c2.htm" />
   <HelpKINode Title="TXTextControl.ReportingCloud.TemplateInfo class" Url="html/9d395791-498b-7ddf-5aa7-e407a425123d.htm" />
+  <HelpKINode Title="TXTextControl.ReportingCloud.TrackedChange class" Url="html/a17e449d-845b-195d-61fd-0ad78a8a7f87.htm" />
+  <HelpKINode Title="TXTextControl.ReportingCloud.TrackedChangeModifiedDocument class" Url="html/9d7f610d-5645-6e07-d6cb-85cb54e4d1dd.htm" />
   <HelpKINode Title="UploadedTemplates property" Url="html/ab6ec440-9cc0-8569-a46a-428be884d57b.htm" />
   <HelpKINode Title="UploadTemplate method" Url="html/aa9a62e0-b6de-777a-4838-28c881073708.htm" />
   <HelpKINode Title="UserDocumentProperties property" Url="html/04323359-b424-7a7b-b319-d86b2a71cf4d.htm" />
+  <HelpKINode Title="UserName property" Url="html/d2944ff1-0f52-49d2-52a5-665ffaf49b4c.htm" />
   <HelpKINode Title="Username property" Url="html/d56f5244-9b12-592c-ae49-2ec70c281d2f.htm" />
   <HelpKINode Title="UserPassword property" Url="html/54139837-6041-0621-f4a6-dafdced37952.htm" />
   <HelpKINode Title="ValidUntil property" Url="html/f9378586-eb33-cc40-9d69-7be9a40160d8.htm" />

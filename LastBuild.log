@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2018.7.8.0" projectFile="C:\Data\ReportingCloud\Nuget and Docs\reportingcloud.dotnet.shfbproj" started="9/21/2018 12:56:48 PM">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2018.7.8.0" projectFile="C:\Data\ReportingCloud\Nuget and Docs\reportingcloud.dotnet.shfbproj" started="8/9/2019 3:13:38 PM">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
@@ -13,25 +13,22 @@ Loading and initializing plug-ins...
 Lightweight Website Style Version 2018.7.8.0
 Copyright &#169; 2006-2018, Eric Woodruff, All Rights Reserved
 Portions Copyright &#169; 2014, Sam Harwell, All Rights Reserved
-</buildStep>
-<buildStep step="ClearWorkFolder">
-Clearing working folder...
 -------------------------------
 Clearing any prior web/markdown output...
 </buildStep>
 <buildStep step="ValidatingDocumentationSources">
 Validating and copying documentation source information
-Source: C:\Users\bjoer\Documents\GitHub\TXTextControl.ReportingCloud.DotNet\ReportingCloudWrapper\bin\Release\ReportingCloud.dll
-    Found assembly &#39;C:\Users\bjoer\Documents\GitHub\TXTextControl.ReportingCloud.DotNet\ReportingCloudWrapper\bin\Release\ReportingCloud.dll&#39;
-Source: C:\Users\bjoer\Documents\GitHub\TXTextControl.ReportingCloud.DotNet\ReportingCloudWrapper\bin\Release\ReportingCloud.xml
+Source: C:\Users\bjoer\Documents\GitHub\TXTextControl.ReportingCloud.DotNet\ReportingCloudWrapper\bin\Release\net45\ReportingCloudWrapper.dll
+    Found assembly &#39;C:\Users\bjoer\Documents\GitHub\TXTextControl.ReportingCloud.DotNet\ReportingCloudWrapper\bin\Release\net45\ReportingCloudWrapper.dll&#39;
+Source: C:\Users\bjoer\Documents\GitHub\TXTextControl.ReportingCloud.DotNet\ReportingCloudWrapper\bin\Release\net45\ReportingCloudWrapper.xml
 
 Copying XML comments files
-    C:\Users\bjoer\Documents\GitHub\TXTextControl.ReportingCloud.DotNet\ReportingCloudWrapper\bin\Release\ReportingCloud.XML -&gt; C:\Data\ReportingCloud\Nuget and Docs\Help\Working\ReportingCloud.XML
+    C:\Users\bjoer\Documents\GitHub\TXTextControl.ReportingCloud.DotNet\ReportingCloudWrapper\bin\Release\net45\ReportingCloudWrapper.xml -&gt; C:\Data\ReportingCloud\Nuget and Docs\Help\Working\ReportingCloudWrapper.xml
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, English (United States))...
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
-</plugIn>    Last step completed in 00:00:00.0256
+</plugIn>    Last step completed in 00:00:00.0625
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
@@ -40,7 +37,7 @@ Generating API filter for MRefBuilder...
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Program Files (x86)\MSBuild\14.0\bin\amd64\MSBuild.exe - GenerateRefInfo.proj]
-Build started 9/21/2018 12:56:49 PM.
+Build started 8/9/2019 3:13:39 PM.
 Project &quot;C:\Data\ReportingCloud\Nuget and Docs\Help\Working\GenerateRefInfo.proj&quot; on node 1 (default targets).
 PrepareForBuild:
   Creating directory &quot;obj\Debug\&quot;.
@@ -50,7 +47,7 @@ GenerateRefInfo:
   Portions Copyright c 2006-2018, Eric Woodruff, All Rights Reserved.
   No source code context base path specified.  Source context information is unavailable.
   Loaded 1 assemblies for reflection and 1 dependency assemblies.
-  Wrote information on 1 namespaces, 17 types, and 113 members
+  Wrote information on 1 namespaces, 24 types, and 141 members
   Copying file from &quot;reflection.org&quot; to &quot;reflection.all&quot;.
   XslTransform (v2018.7.8.0)
   Copyright c 2006-2018, Microsoft Corporation, All Rights Reserved.
@@ -60,13 +57,13 @@ Done Building Project &quot;C:\Data\ReportingCloud\Nuget and Docs\Help\Working\G
 
 Build succeeded.
 
-Time Elapsed 00:00:00.53
-    Last step completed in 00:00:00.6379
+Time Elapsed 00:00:00.70
+    Last step completed in 00:00:00.8438
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Program Files (x86)\MSBuild\14.0\bin\amd64\MSBuild.exe - TransformManifest.proj]
-Build started 9/21/2018 12:56:50 PM.
+Build started 8/9/2019 3:13:40 PM.
 Project &quot;C:\Data\ReportingCloud\Nuget and Docs\Help\Working\TransformManifest.proj&quot; on node 1 (default targets).
 TransformManifest:
   XslTransform (v2018.7.8.0)
@@ -86,8 +83,8 @@ Done Building Project &quot;C:\Data\ReportingCloud\Nuget and Docs\Help\Working\T
 
 Build succeeded.
 
-Time Elapsed 00:00:00.40
-    Last step completed in 00:00:00.5013
+Time Elapsed 00:00:00.57
+    Last step completed in 00:00:00.6719
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
@@ -105,7 +102,7 @@ Merging conceptual and additional tables of contents...
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Program Files (x86)\MSBuild\14.0\bin\amd64\MSBuild.exe - GenerateIntermediateTOC.proj]
-Build started 9/21/2018 12:56:50 PM.
+Build started 8/9/2019 3:13:40 PM.
 Project &quot;C:\Data\ReportingCloud\Nuget and Docs\Help\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
 GenerateIntermediateTOC:
   XslTransform (v2018.7.8.0)
@@ -116,26 +113,26 @@ Done Building Project &quot;C:\Data\ReportingCloud\Nuget and Docs\Help\Working\G
 
 Build succeeded.
 
-Time Elapsed 00:00:00.08
+Time Elapsed 00:00:00.09
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:00.1849
+    Last step completed in 00:00:00.1875
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00.1315
+    Last step completed in 00:00:00.4375
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
 C:\Data\ReportingCloud\Nuget and Docs\Help\Working\sandcastle.config
   Updating reference topic configurations.
   No conceptual content.  Removing conceptual content components.
-    Last step completed in 00:00:00.0221
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="BuildTopics">
 Building help topics...
 [C:\Program Files (x86)\MSBuild\14.0\bin\amd64\MSBuild.exe - BuildTopics.proj]
-Build started 9/21/2018 12:56:50 PM.
+Build started 8/9/2019 3:13:41 PM.
 Project &quot;C:\Data\ReportingCloud\Nuget and Docs\Help\Working\BuildTopics.proj&quot; on node 1 (default targets).
 BuildTopics:
   BuildAssembler (v2018.7.8.0)
@@ -143,15 +140,16 @@ BuildTopics:
   Portions Copyright c 2006-2018, Eric Woodruff, All Rights Reserved.
   Loading configuration...
   Processing topics...
-  Processed 147 topic(s)
-  CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 4 of 15.
+  Processed 184 topic(s)
+  CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 5 of 15.
   CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 2 of 30.
+  ResolveReferenceLinksComponent: 1 entries added to the MSDN content ID cache.  New cache size: 21 entries
 Done Building Project &quot;C:\Data\ReportingCloud\Nuget and Docs\Help\Working\BuildTopics.proj&quot; (default targets).
 
 Build succeeded.
 
-Time Elapsed 00:00:03.69
-    Last step completed in 00:00:03.7810
+Time Elapsed 00:00:07.50
+    Last step completed in 00:00:07.6160
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
@@ -167,11 +165,11 @@ E-Mail: Eric@EWoodruff.us
 Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
 
 Processing website files in C:\Data\ReportingCloud\Nuget and Docs\Help\Working\Output\Website
-Processed 147 HTML files
+Processed 184 HTML files
 Sorting keywords and generating See Also indices
 Saving website keyword index to C:\Data\ReportingCloud\Nuget and Docs\Help\Working\WebKI.xml
 Saving website table of contents to C:\Data\ReportingCloud\Nuget and Docs\Help\Working\WebTOC.xml
-    Last step completed in 00:00:00.1849
+    Last step completed in 00:00:00.4253
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -253,32 +251,32 @@ C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyle
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\branding-Website.js -&gt; C:\Data\ReportingCloud\Nuget and Docs\Help\Working\Output\Website\scripts\branding-Website.js
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\clipboard.min.js -&gt; C:\Data\ReportingCloud\Nuget and Docs\Help\Working\Output\Website\scripts\clipboard.min.js
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\jquery-1.11.0.min.js -&gt; C:\Data\ReportingCloud\Nuget and Docs\Help\Working\Output\Website\scripts\jquery-1.11.0.min.js
-    Last step completed in 00:00:00.1159
+    Last step completed in 00:00:00.4611
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating website table of contents file...
-    Last step completed in 00:00:00.0000
+    Last step completed in 00:00:00.0010
 </buildStep>
 <buildStep step="GenerateFullTextIndex">
 Generating full-text index for the website...
 
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
 Adding lightweight search and TOC elements to each topic...
-</plugIn>    Last step completed in 00:00:00.4167
+</plugIn>    Last step completed in 00:00:00.6336
 </buildStep>
 <buildStep step="CopyingWebsiteFiles">
 Copying website files to output folder...
 
-Copied 284 files for the website content
-    Last step completed in 00:00:00.5169
+Copied 331 files for the website content
+    Last step completed in 00:00:00.6561
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.0534
+    Last step completed in 00:00:00.0469
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 9/21/2018 12:56:55 PM.  Total time: 00:00:07.1993
+Build completed successfully at 8/9/2019 3:13:51 PM.  Total time: 00:00:12.7464
 
 </buildStep>
 </shfbBuild>
