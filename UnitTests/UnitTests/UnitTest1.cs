@@ -189,12 +189,61 @@ namespace TXTextControl.ReportingCloud.Tests
         }
 
         [TestMethod()]
-        public void GetTemplateThumbnailsTest()
+        public void GetDocumentTrackedChangesTest()
         {
             try
             {
                 ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
 
+                // upload 1 more document with unique file name
+                byte[] bDocument = File.ReadAllBytes("documents/tracked.tx");
+
+                List<TrackedChange> trackedChanges = rc.Processing.Review.GetTrackedChanges(bDocument);
+            }
+            catch (Exception exc)
+            {
+                Assert.Fail(exc.Message);
+            }
+        }
+
+        [TestMethod()]
+        public void RemoveDocumentTrackedChangeTest()
+        {
+            try
+            {
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+
+                // upload 1 more document with unique file name
+                byte[] bDocument = File.ReadAllBytes("documents/tracked.tx");
+
+                List<TrackedChange> trackedChanges = rc.Processing.Review.GetTrackedChanges(bDocument);
+
+                int numTrackedChanges = trackedChanges.Count;
+
+                TrackedChangeModifiedDocument modifiedDocument = 
+                    rc.Processing.Review.RemoveTrackedChange(bDocument, trackedChanges[0].Id, true);
+
+                if (modifiedDocument.Removed == true)
+                {
+                    List<TrackedChange> trackedChangesModified = 
+                        rc.Processing.Review.GetTrackedChanges(modifiedDocument.Document);
+
+                    Assert.IsFalse(trackedChanges.Count == trackedChangesModified.Count);
+                }
+            }
+            catch (Exception exc)
+            {
+                Assert.Fail(exc.Message);
+            }
+        }
+
+        [TestMethod()]
+        public void GetTemplateThumbnailsTest()
+        {
+            try
+            {
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+                
                 // upload 1 more document with unique file name
                 byte[] bDocument = File.ReadAllBytes("documents/invoice.tx");
                 string sTempFilename = "test" + Guid.NewGuid().ToString() + ".tx";
@@ -283,8 +332,8 @@ namespace TXTextControl.ReportingCloud.Tests
 
                 // upload 1 more document with unique file name
                 byte[] bDocument = File.ReadAllBytes("documents/invoice.tx");
-                string sTempFilename = "test" + Guid.NewGuid().ToString() + ".tx";
-                rc.UploadTemplate(sTempFilename, bDocument);
+                //string sTempFilename = "test" + Guid.NewGuid().ToString() + ".tx";
+                //rc.UploadTemplate(sTempFilename, bDocument);
 
                 // create dummy data
                 Invoice invoice = new Invoice();
@@ -295,6 +344,7 @@ namespace TXTextControl.ReportingCloud.Tests
                 // create a new MergeBody object
                 MergeBody body = new MergeBody();
                 body.MergeData = invoice;
+                body.Template = bDocument;
 
                 MergeSettings settings = new MergeSettings();
                 settings.Author = "Text Control GmbH";
@@ -303,23 +353,13 @@ namespace TXTextControl.ReportingCloud.Tests
 
                 body.MergeSettings = settings;
 
-                if (rc.TemplateExists(sTempFilename))
-                {
-                    // merge the document
-                    List<byte[]> results = rc.MergeDocument(body, sTempFilename, ReturnFormat.HTML);
+                // merge the document
+                List<byte[]> results = rc.MergeDocument(body, null, ReturnFormat.HTML);
 
-                    string bHtmlDocument = System.Text.Encoding.UTF8.GetString(results[0]);
+                string bHtmlDocument = System.Text.Encoding.UTF8.GetString(results[0]);
 
-                    // check whether the created HTML contains the test string
-                    Assert.IsTrue(bHtmlDocument.Contains("Test_R667663"));
-
-                    // delete the template
-                    rc.DeleteTemplate(sTempFilename);
-                }
-                else
-                {
-                    Assert.Fail("Template is not uploaded.");
-                }
+                // check whether the created HTML contains the test string
+                Assert.IsTrue(bHtmlDocument.Contains("Test_R667663"));
             }
             catch (Exception exc)
             {

@@ -62,6 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="documents\tracked.tx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="documents\invoice.tx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

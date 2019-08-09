@@ -14,6 +14,55 @@ namespace UnitTestsCoreWrapper
         Uri uriBasePath = new Uri("https://api.reporting.cloud/");
 
         [TestMethod()]
+        public void GetDocumentTrackedChangesTest()
+        {
+            try
+            {
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+
+                // upload 1 more document with unique file name
+                byte[] bDocument = File.ReadAllBytes("documents/tracked.tx");
+
+                List<TrackedChange> trackedChanges = rc.Processing.Review.GetTrackedChanges(bDocument);
+            }
+            catch (Exception exc)
+            {
+                Assert.Fail(exc.Message);
+            }
+        }
+
+        [TestMethod()]
+        public void RemoveDocumentTrackedChangeTest()
+        {
+            try
+            {
+                ReportingCloud rc = new ReportingCloud(sUsername, sPassword, uriBasePath);
+
+                // upload 1 more document with unique file name
+                byte[] bDocument = File.ReadAllBytes("documents/tracked.tx");
+
+                List<TrackedChange> trackedChanges = rc.Processing.Review.GetTrackedChanges(bDocument);
+
+                int numTrackedChanges = trackedChanges.Count;
+
+                TrackedChangeModifiedDocument modifiedDocument =
+                    rc.Processing.Review.RemoveTrackedChange(bDocument, trackedChanges[0].Id, true);
+
+                if (modifiedDocument.Removed == true)
+                {
+                    List<TrackedChange> trackedChangesModified =
+                        rc.Processing.Review.GetTrackedChanges(modifiedDocument.Document);
+
+                    Assert.IsFalse(trackedChanges.Count == trackedChangesModified.Count);
+                }
+            }
+            catch (Exception exc)
+            {
+                Assert.Fail(exc.Message);
+            }
+        }
+
+        [TestMethod()]
         public void ReportingCloudAPIKeyTest()
         {
             try
