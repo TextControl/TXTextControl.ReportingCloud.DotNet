@@ -88,8 +88,8 @@ namespace TXTextControl.ReportingCloud
 
                     TrackedChangeModifiedDocument modifiedDocument = new TrackedChangeModifiedDocument()
                     {
-                        Removed = (bool)((JObject)returnValue)["Removed"],
-                        Document = Convert.FromBase64String((string)((JObject)returnValue)["Document"])
+                        Removed = (bool)((JObject)returnValue)["removed"],
+                        Document = Convert.FromBase64String((string)((JObject)returnValue)["document"])
                     };
 
                     return modifiedDocument;
